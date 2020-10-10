@@ -5,14 +5,16 @@ body {
 
 h2{
  text-decoration: underline overline dashed darkslategray ;
+ font-size: 300%;
 }
 
 input{
-width: 50px;
+width: 100px;
+ height: 200%;
 }
 
 th{
-font-size: 12px;
+font-size: 24px;
 }
 
 button{
@@ -21,7 +23,7 @@ font-family: monospace;
 }
 
 #today{
-font-size: 9px ;
+font-size: 18px ;
 text-align: center;
 font-family: monospace ;
 }
@@ -29,7 +31,7 @@ font-family: monospace ;
 #out2{
 font-weight: bold;
 font-family: monospace;
-font-size: 15px ;
+font-size: 30px ;
 }
 
 #outputbox{
@@ -48,7 +50,7 @@ font-family: monospace ;
 #out5{
 font-weight: bold;
 font-family: monospace;
-font-size: 15px ;
+font-size: 30px ;
 }
 
 #distances{
@@ -57,7 +59,7 @@ font-family: monospace ;
 }
 
 #calendar1, #calendar2, #calendar3{
-width: 180px  ;
+width: 360px  ;
 }
 
 .bar{
@@ -72,6 +74,6 @@ background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, 
 }
 
 #signature{
-    font-size: 10px;
+    font-size: 20px;
     text-align: center;
 }
