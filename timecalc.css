@@ -1,0 +1,77 @@
+body {
+ font-family: Serif;
+ background-color: lightSteelBlue ;
+}
+
+h2{
+ text-decoration: underline overline dashed darkslategray ;
+}
+
+input{
+width: 50px;
+}
+
+th{
+font-size: 12px;
+}
+
+button{
+border-radius: 5px ;
+font-family: monospace;
+}
+
+#today{
+font-size: 9px ;
+text-align: center;
+font-family: monospace ;
+}
+
+#out2{
+font-weight: bold;
+font-family: monospace;
+font-size: 15px ;
+}
+
+#outputbox{
+border: solid 1px lightGray;
+background-color: gainsboro;
+border-radius: 5px;
+margin-top: 5px;
+color: black ;
+}
+
+#convertion{
+text-align: right;
+font-family: monospace ;
+}
+
+#out5{
+font-weight: bold;
+font-family: monospace;
+font-size: 15px ;
+}
+
+#distances{
+text-align: right;
+font-family: monospace ;
+}
+
+#calendar1, #calendar2, #calendar3{
+width: 180px  ;
+}
+
+.bar{
+
+width: 390px;
+
+height: 4px ;
+
+font-weight: bold;
+
+background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) ;
+}
+
+#signature{
+    font-size: 10px;
+    text-align: center;
+}
