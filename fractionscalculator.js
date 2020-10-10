@@ -46,7 +46,7 @@ function simp(numerador, denominador) {
 
 
 
-//Output da simplificação 
+//Output of simplification
 
 function simpans(x, y) {
     console.log("simpans acionada");
@@ -62,21 +62,20 @@ function simpans(x, y) {
     }
 
     if (fraction.integer === 0 && fraction.numerator != 0) {
-        return "The fraction " + x + "/" + y + " is equal to " + fraction.numerator + "/" + fraction.denominator;
+        return x + "/" + y + " = " + fraction.numerator + "/" + fraction.denominator;
     }
 
     if (fraction.integer != 0 && fraction.numerator === 0) {
-        return "The fraction " + x + "/" +  y + " is equal to " + fraction.integer + ".";
+        return x + "/" +  y + " = " + fraction.integer + ".";
     }
 
     if (fraction.integer != 0 && fraction.numerator != 0) {
-        return "The fraction " + x + "/" + y + " is equal to " + fraction.integer + " " + fraction.numerator + "/" +  fraction.denominator;
+        return x + "/" + y + " = " + fraction.integer + " " + fraction.numerator + "/" +  fraction.denominator;
     }
 
 }
 
 function simpout() {
-    console.log("simpout acionada");
     var x = +document.getElementById("inp1").value;
     var y = +document.getElementById("inp2").value;
     document.getElementById("out1").innerHTML = simpans(x, y);
