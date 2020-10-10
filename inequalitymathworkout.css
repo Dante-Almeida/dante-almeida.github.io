@@ -6,7 +6,7 @@
     width: 20%;
     border: solid black 3px;
     border-radius: 15px;
-}
+    }
 
 
 button{
@@ -16,19 +16,19 @@ button{
   font-size: 50px;
   border-radius: 60px;
   display: inline;
-}
+    }
 
 
 #startButton{
     font-size: 20px;
     width: 30%;
-}
+    }
 
 
 #container{
   width: 50%;
   float: center;
-}
+    }
 
 
 #firstValue{
@@ -37,7 +37,7 @@ button{
     font-family: sans-serif;
     height: 90%;
     padding: 10px 0;
-}
+    }
 
 
 #secondValue{
@@ -46,30 +46,30 @@ button{
     font-family: sans-serif;
     height: 100%;
     padding: 10px 0;
-}
+    }
 
 
 #buttons{
     display: inline;
     width: 30%;
-}
+    }
 
 
 .div{
     display: inline;  
     margin: auto;
     float: center;
-}
+    }
 
 
 #instructions{
   font-size: 10px;
   height: 15px;
   width: 98px;
-}
+    }
 
 
 #signature{
     font-size: 10px;
     text-align: center;
-}
+    }
