@@ -64,10 +64,13 @@ button{
 
 
 #instructions{
-  font-size: 20px;
-  height: 30px;
-  width: 98px;
-    }
+            font-size: 20px;
+            height: auto;
+            width: auto;
+            margin: auto;
+            text-align: center;
+            float: center;
+            }
 
 
 #signature{
