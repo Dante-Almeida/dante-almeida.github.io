@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Fractions Calculator </title>
+        <style>
+            body {
+                font-family: monospace ;
+            }
+  
+            .operation{
+                width: 40px ;
+                height: 40px ;
+                border-radius: 5px ;
+                text-align: center ;
+                font-weight: bold ;
+                font-size: 30px ;
+            }
+  
+            #out2, #out1{
+                font-size: 40px ;
+                font-weight: bold;
+              }
+     
+     
+            signature{
+                font-size: 10px;
+                text-align: center;
+            }
+  
+        </style>
+    </head>
+    <body>
+        <h1 style="background-color: lightGrey; border-radius: 20px 20px 20px 20px; padding: 5px 0 0 5px ; text-alignment: center; ">FRACTIONS CALCULATOR </h1>
+            <h3>Reduce a Fraction </h3>
+                <strong>numerator:</strong><br><input id="inp1" type="number" placeholder="input a natural number " min="0"><br>
+                <strong>denominator:</strong><br><input id="inp2" type="number" placeholder="input a positive integer">
+
+                <button onclick="simpout()">REDUCE</button>
+
+                <p id="out1" style="font-size: 14px;"></p><br>
+
+            <h3>FRACTIONS ARITHMETIC </h3>
+
+                <p><em>Input the values and choose the operation </em></p>
+
+                <strong>first fraction's numerator:</strong><br><input id="inp3" type="number" placeholder="input a natural number" min="0"><br>
+
+                <strong>first fraction's denominator:</strong><br><input id="inp4" type="number" placeholder="input a positive integer"><br>
+
+                <button class="operation" onclick="sum()"> + </button>
+                <button class="operation" onclick="subt()"> - </button>
+                <button class="operation" onclick="times()"> x </button>
+                <button class="operation" onclick="div()"> ÷ </button>
+
+                <br>
+
+                <strong>second fraction's numerator:</strong><br><input id="inp5" type="number" placeholder="input a natural number" min="0"><br>
+
+                <strong>second fraction's denominator:</strong><br><input id="inp6" type="number" placeholder="input a positive integer"><br>
+
+                <p id="out2" style="font-size: 14px;"></p><br><br>
+
+                <div id="signature"><p>Autor: Dante Cardoso Pinto de Almeida</p>
+                    <p>License: CC BY-SA</p>
+                </div>    
+    
+        <script src="fractionscalculator.js"></script>
+ 
+    </body>
+</html>
