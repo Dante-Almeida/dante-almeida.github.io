@@ -11,6 +11,7 @@ h2{
 input{
      width: 100px;
      height: 200%;
+     font-size: 300%;
     }
 
 th{
@@ -21,7 +22,6 @@ button{
       border-radius: 5px ;
       font-family: monospace;
       font-size: 250%;
-      
       }
 
 #today{
