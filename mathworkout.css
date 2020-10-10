@@ -1,0 +1,38 @@
+div{
+    text-align: center;
+    }
+
+p {
+    font-size: 22px ;
+    }
+
+button{
+        font-size: 20px;
+        }
+
+input{
+        font-size: 20px;
+        width: 100px ;
+        text-align: center;
+        }
+
+.number{
+        font-size: 30px;
+        width: 50px;
+        font-family: monospace;
+        }
+
+#problem {
+        text-align: center ;
+        font-family: monospace;
+        }
+
+.keys {
+        font-size: 0;
+}
+
+
+#signature{
+    font-size: 10px;
+    text-align: center;
+}

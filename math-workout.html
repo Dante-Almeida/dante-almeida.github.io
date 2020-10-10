@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title>Math Workout</title>
+        <link rel="stylesheet" href="mathworkout.css">
+    </head>
+    
+    <body>
+        <center>
+            <h1>Math Workout </h1>
+
+            <p id="feedback"></p><br>
+
+            <h1 id="problem"></h1>
+
+            <input type="number" id="answer">
+            <button onClick="checkSolution()">Check</button>
+        </center>
+
+        <br>
+
+        <div class="keys">
+
+            <button class="number" onClick="inPut(1)">1</button>
+            <button class="number" onClick="inPut(2)">2</button>
+            <button class="number" onClick="inPut(3)">3</button>
+        </div>
+        <div class="keys">
+            <button class="number" onClick="inPut(4)">4</button>
+            <button class="number" onClick="inPut(5)">5</button>
+            <button class="number" onClick="inPut(6)">6</button>
+        </div>
+        <div class="keys">
+            <button class="number" onClick="inPut(7)">7</button>
+            <button class="number" onClick="inPut(8)">8</button>
+            <button class="number" onClick="inPut(9)">9</button> <br>
+            <button class="number" onClick="inPut(0)">0</button> 
+        </div>
+
+        <p id="livesleft">Lives: ❤❤❤</p>
+        <p><strong>Correct Answers: </strong><span id="points">0</span></p>
+
+        <center>
+            <button onClick="restart() ">RE-START</button>
+        </center>
+        <br><br><br>
+        
+     <div id="signature"><p>Autor: Dante Cardoso Pinto de Almeida</p>
+     <p>License: CC BY-SA</p>
+     </div>
+        <script src="mathworkout.js"></script>
+    </body>
+</html>
