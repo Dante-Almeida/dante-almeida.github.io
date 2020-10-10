@@ -3,22 +3,22 @@ div{
     }
 
 p {
-    font-size: 22px ;
+    font-size: 44px ;
     }
 
 button{
-        font-size: 20px;
+        font-size: 40px;
         }
 
 input{
-        font-size: 20px;
+        font-size: 40px;
         width: 100px ;
         text-align: center;
         }
 
 .number{
-        font-size: 30px;
-        width: 50px;
+        font-size: 60px;
+        width: 100px;
         font-family: monospace;
         }
 
@@ -33,6 +33,6 @@ input{
 
 
 #signature{
-    font-size: 10px;
+    font-size: 20px;
     text-align: center;
 }
