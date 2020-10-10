@@ -58,6 +58,7 @@ button{
 .div{
     display: inline;  
     margin: auto;
+    float: center;
 }
 
 
