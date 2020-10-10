@@ -10,12 +10,13 @@
 
 
 button{
-  width: 120px;
+  width: auto;
   height: 120px;
   font-weight: bold;
   font-size: 50px;
   border-radius: 120px;
   display: inline;
+  margin: auto;
     }
 
 
