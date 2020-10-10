@@ -1,0 +1,74 @@
+#timer{
+    font-size: 30px;
+    text-align: center;
+    font-family: monospace;
+    background-color: lightblue;
+    width: 20%;
+    border: solid black 3px;
+    border-radius: 15px;
+}
+
+
+button{
+  width: 60px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 60px;
+  display: inline;
+}
+
+
+#startButton{
+    font-size: 20px;
+    width: 30%;
+}
+
+
+#container{
+  width: 50%;
+  float: center;
+}
+
+
+#firstValue{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+    height: 90%;
+    padding: 10px 0;
+}
+
+
+#secondValue{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+    height: 100%;
+    padding: 10px 0;
+}
+
+
+#buttons{
+    display: inline;
+    width: 30%;
+}
+
+
+.div{
+    display: inline;  
+    margin: auto;
+}
+
+
+#instructions{
+  font-size: 10px;
+  height: 15px;
+  width: 98px;
+}
+
+
+#signature{
+    font-size: 10px;
+    text-align: center;
+}
