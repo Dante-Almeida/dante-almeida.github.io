@@ -49,7 +49,6 @@ function simp(numerador, denominador) {
 //Output of simplification
 
 function simpans(x, y) {
-    console.log("simpans acionada");
     if (y === 0) {
         return false;
     }
@@ -66,7 +65,7 @@ function simpans(x, y) {
     }
 
     if (fraction.integer != 0 && fraction.numerator === 0) {
-        return x + "/" +  y + " = " + fraction.integer + ".";
+        return x + "/" +  y + " = " + fraction.integer;
     }
 
     if (fraction.integer != 0 && fraction.numerator != 0) {
