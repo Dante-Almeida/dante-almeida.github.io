@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>CSS Image Filters Tool</title>
+    <link rel="stylesheet" href="imagefiltertool.css">
+</head>
+<body>
+
+  <h1> CSS Image Filters Tool</h1>
+
+  <p>Insert an image's URL: <input id="imageURL" type="url" oninput="renderImage()"></p>
+
+    <p>Or pick a sample image: <select id="imageSample" onchange="pickSample();">
+            <option value="butterfly">Butterfly on flower</option>
+            <option value="frog">Frog</option>
+            <option value="peacock">Peacock</option>
+            <option value="fish">Fish</option>
+        </select>
+    </p>
+
+    <center>
+        <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Monarch_Butterfly_Pink_Zinnia_1800px.jpg ">
+        <br>
+        <a id="source" href="https://commons.wikimedia.org/wiki/File:Monarch_Butterfly_Pink_Zinnia_1800px.jpg">Image source</a>
+    </center>
+
+    <table>
+        <tr>
+            <td>Blur: </td>
+            <td class="ranger"><input id="blur" type="range" min="0" max="35" value="0" oninput="setBlur();"></td>
+            <td id="valueBlur">0px</td>
+
+        </tr>
+
+        <tr>
+            <td>Brightness:</td>
+            <td class="ranger"><input id="bright" type="range" min="0" max="200" value="100" oninput="setBrightness();"></td>
+            <td id="valueBrightness">100%</td>
+        </tr>
+
+        <tr>
+            <td>Contrast:</td>
+            <td class="ranger"><input id="contrast" type="range" min="0" max="400" value="100" oninput="setContrast();"> </td>
+            <td id="valueContrast">100% </td>
+
+        </tr>
+
+        <tr>
+            <td>Grayscale: </td>
+            <td class="ranger"><input id="gray" type="range" min="0" max="100" value="0" oninput="setGrayscale();"> </td>
+            <td id="valueGrayscale">0% </td>
+        </tr>
+
+        <tr>
+            <td>Hue-rotation: </td>
+            <td class="ranger"><input id="hue" type="range" min="0" max="360" value="0" oninput="setHueRotation();"> </td>
+            <td id="valueHue">0deg </td>
+        </tr>
+
+        <tr>
+            <td>Opacity:</td>
+            <td class="ranger"><input id="opacity" type="range" min="0" max="100" value="100" oninput="setOpacity();"> </td>
+            <td id="valueOpacity">100% </td>
+        </tr>
+
+        <tr>
+            <td>Saturation: </td>
+            <td class="ranger"><input id="saturate" type="range" min="0" max="300" value="100" oninput="setSaturation();"> </td>
+            <td id="valueSaturation">100% </td>
+        </tr>
+
+        <tr>
+            <td>Sepia: </td>
+            <td class="ranger"><input id="sepia" type="range" min="0" max="100" value="0" oninput="setSepia();"> </td>
+            <td id="valueSepia">0% </td>
+        </tr>
+
+        <tr>
+            <td>Invert: </td>
+            <td class="ranger"><input id="invert" type="range" min="0" max="100" value="0" oninput="setInvert();"> </td>
+            <td id="valueInvert">0% </td>
+        </tr>
+
+        <tr>
+            <td>Shadow: <input id="shadow" style="text-align=left; width:20%;" type="checkbox"  onclick="setShadow()"></td> 
+        </tr>
+
+        <tr>
+            <td id="label1" class="disabled">Shadow's height: </td>
+            <td class="ranger"><input id="vShadow" class="shadowControls" type="range" min="-100" max="100" value="8" oninput="setVerticalShadow();" disabled> </td>
+            <td id="valueVShadow"> </td>
+        </tr>
+
+        <tr>
+            <td id="label2" class="disabled">Shadow's width: </td>
+            <td class="ranger"><input id="hShadow" class="shadowControls" type="range" min="-100" max="100" value="8" oninput="setHorizontalShadow();" disabled> </td>
+            <td id="valueHShadow"> </td>
+        </tr>
+
+
+        <tr>
+            <td id="label3" class="disabled">Shadow's blur: </td>
+            <td class="ranger"><input id="bShadow" class="shadowControls" type="range" min="0" max="100" value="10" oninput="setBlurShadow();" disabled> </td>
+            <td id="valueBShadow"> </td>
+        </tr>
+
+
+        <tr>
+            <td id="label4" class="disabled">Shadow's Color: </td>
+            <td class="ranger"><input id="cShadow" class="shadowControls" type="color" value="#888888" oninput="setColorShadow();" disabled> </td>
+            <td id="valueCShadow"> </td>
+        </tr>
+
+    </table>
+
+        <button onclick="getCSS();">Get CSS code</button>
+
+    <center>
+            <div id="box" >
+                <p id="output"></p>
+                <button onclick="toClipboard(codeOutput);">Copy to Clipboard</button>
+            </div>
+    </center>
+
+    <br><br>
+    
+     <div id="signature"><p>Autor: Dante Cardoso Pinto de Almeida</p>
+     <p>License: CC BY-SA</p>
+     </div>
+
+
+ <script src="imagefiltertool.js"></script>
+</body>
+</html>

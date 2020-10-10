@@ -1,0 +1,42 @@
+img {
+    width: 50%;
+    }
+
+h1{
+    text-align: center;  
+    }
+
+table{
+    width: 100%;  
+    }
+
+.ranger{
+        width: 75%;
+        }
+
+input{
+    width: 100%;
+    }
+
+.disabled{
+        color: lightGray;
+        }
+
+.enabled{
+        color:black;
+        }
+
+
+#box{
+    text-align: center;  
+    width: 60%;
+    background-color: lavender;
+    border: solid black 1px;
+    border-radius: 10px;
+    }
+
+
+#signature{
+    font-size: 10px;
+    text-align: center;
+}
