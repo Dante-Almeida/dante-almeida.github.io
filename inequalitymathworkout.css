@@ -1,13 +1,13 @@
 #timer{
-    font-size: 60px;
-    text-align: center;
-    font-family: monospace;
-    background-color: lightblue;
-    width: 40%;
-    border: solid black 3px;
-    border-radius: 15px;
-    float: center;
-    margin: auto;
+        font-size: 60px;
+        text-align: center;
+        font-family: monospace;
+        background-color: lightblue;
+        width: 40%;
+        border: solid black 3px;
+        border-radius: 15px;
+        float: center;
+        margin: auto;
     }
 
 
@@ -23,15 +23,15 @@ button{
 
 
 #startButton{
-    font-size: 90px;
+    font-size: 60px;
     width: 70%;
     }
 
 
 #container{
-  width: 50%;
-  float: center;
-    }
+            width: 50%;
+            float: center;
+            }
 
 
 #firstValue{
