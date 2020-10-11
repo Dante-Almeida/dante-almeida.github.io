@@ -23,9 +23,9 @@ button{
 
 
 #startButton{
-    font-size: 60px;
-    width: 60%;
-    }
+             font-size: 60px;
+             width: 60%;
+             }
 
 #feedback{
         font-size: 300%;
@@ -64,10 +64,10 @@ button{
 
 
 #buttons{
-    margin: auto;
-    display: inline;
-    width: 40%;
-    }
+        margin: auto;
+        display: inline;
+        width: 40%;
+        }
 
 
 .div{
@@ -89,6 +89,6 @@ button{
 
 
 #signature{
-    font-size: 20px;
-    text-align: center;
-    }
+           font-size: 20px;
+           text-align: center;
+           }
