@@ -34,6 +34,12 @@
                    position: relative;
                    left: 15px;
                   }
+            
+            #buttonsBox{
+                        text-align: center;
+                        margin: auto;
+                        display: inline;
+                        }
   
         </style>
     </head>
@@ -61,12 +67,13 @@
 
                 <strong>second fraction's denominator:</strong><br><input id="inp6" type="number" placeholder="input a positive integer"><br>
                 <br>
+                <div id="buttonsBox">
                 <button class="operation" onclick="sum()"> + </button>
                 <button class="operation" onclick="subt()"> - </button>
                 <button class="operation" onclick="times()"> x </button>
                 <button class="operation" onclick="div()"> ÷ </button>
-
                 <br>
+                </div>
 
                 <p id="out2" style="font-size: 35px;"></p><br>
 
