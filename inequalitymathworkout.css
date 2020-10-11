@@ -1,95 +1,84 @@
+body{
+    text-align: center;
+    }
+
 #timer{
-        font-size: 60px;
+        font-size: 30px;
         text-align: center;
         font-family: monospace;
         background-color: lightblue;
-        width: 40%;
+        width: 20%;
         border: solid black 3px;
         border-radius: 15px;
-        float: center;
         margin: auto;
-    }
+        }
 
 
 button{
-        width: 150px;
-        height: 150px;
+        width: 60px;
+        height: 60px;
         font-weight: bold;
         font-size: 50px;
-        border-radius: 150px;
+        border-radius: 60px;
         display: inline;
-        text-align: center;
-        margin: auto;
         }
 
 
 #startButton{
-             font-size: 60px;
-             width: 60%;
-             }
-
-#feedback{
-        font-size: 300%;
-        text-align: center;
-        }
+    font-size: 250%;
+    width: 20%;
+    height: 250%;
+}
 
 
 #container{
-            width: 50%;
-            float: center;
-            }
+  width: 50%;
+  margin: auto;
+}
 
 
 #firstValue{
-            font-size: 80px;
+            font-size: 40px;
             font-weight: bold;
             font-family: sans-serif;
             height: 90%;
             padding: 10px 0;
-            margin: auto;
-            float: center;
-            text-align: center;
             }
 
 
 #secondValue{
-            font-size: 80px;
+            font-size: 40px;
             font-weight: bold;
             font-family: sans-serif;
             height: 100%;
             padding: 10px 0;
-            margin: auto;
-            float: center;
-            text-align: center;
             }
 
 
 #buttons{
-        margin: auto;
-        display: inline;
-        width: 40%;
-        }
+    display: inline;
+    width: 30%;
+    }
 
 
 .div{
     display: inline;  
     margin: auto;
-    float: center;
-    text-align: center;
     }
 
 
 #instructions{
-            font-size: 50px;
-            height: auto;
-            width: auto;
-            margin: auto;
-            text-align: center;
-            float: center;
+            font-size: 180%;
+            height: 180%;
+            width: 20%;
             }
 
 
 #signature{
-           font-size: 20px;
-           text-align: center;
-           }
+            font-size: 10px;
+            text-align: center;
+            }
+
+#feedback{
+        font-size: 200%;
+        }
