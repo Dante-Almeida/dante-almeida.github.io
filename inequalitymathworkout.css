@@ -64,6 +64,7 @@ button{
 
 
 #buttons{
+    margin: auto;
     display: inline;
     width: 40%;
     }
@@ -73,6 +74,7 @@ button{
     display: inline;  
     margin: auto;
     float: center;
+    text-align: center;
     }
 
 
