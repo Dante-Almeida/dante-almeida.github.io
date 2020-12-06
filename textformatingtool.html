@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+ <head>
+  <title>CSS Text Formating Tool</title>
+  <link rel="stylesheet" href="textformatingtool.css">
+ </head>
+ <body>
+    <h3>CSS Text Formating Tool</h3>
+
+ 
+    <p> Pick font: <select id="fontPicker" onchange="pickFont();">
+        <optgroup label="Sans-serif" style="font-family: sans-serif;">
+            <option value="Arial" style="font-family: Arial;">Arial</option>
+            <option value="Helvetica" style="font-family: Helvetica;">Helvetica</option>
+            <option value="Charcoal" style="font-family: Charcoal;">Charcoal</option>
+        </optgroup>
+            <option value="cursive" style="font-family: cursive;">Cursive</option>
+        <optgroup label="Serif" style="font-family: Serif;">
+            <option value="Times" style="font-family: Times;">Times</option>
+            <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+            <option value="Palatino" style="font-family: Palatino;">Palatino</option>
+        </optgroup>
+        <optgroup label="Monospace" style="font-family: monospace;">
+            <option value="courier" style="font-family: courier;">Courier</option>
+            <option value="monaco" style="font-family: monaco;">Monaco</option>
+        </optgroup>
+    </select></p>
+
+  Pick text alignment: <select name="textAlignment" id="alignment" onchange="align();">
+        <option value="left" >left</option>
+        <option value="center" >center</option>    
+        <option value="right">right</option>
+        <option value="justify">justify</option>  
+  </select>
+
+  <p>Pick the font size: <input id="sizer" type="range" min="1" max="100" value="15" oninput="setSize()" style="width:200px;"><span id="size">15px</span> </p>
+  
+  <p>Pick the line height: <input id="heighter" type="range" min="1" max="50" value="15" oninput="setHeight()" style="width:200px;"><span id="height">1.5</span> </p>
+  <p>Pick the font weight: <input id="weighter" type="range" min="1" max="9" value="4" oninput="setWeight()" style="width:200px;"><span id="weight">400</span> </p>  
+  <p>Pick text color by code: <input type="color" id="textColorMenu" oninput="setTextColor();"></p>
+  <p>Pick background color by code: <input type="color"  value="#FFFFFF" id="backgroundColorMenu" oninput="setBackgroundColor();"></p>
+  <p><input type="checkbox" oninput="setItalic();"> <span style="font-style: italic;"> Italic</italic></p>
+  <p><input type="checkbox" oninput="overline=!overline; textDecoration();"> <span style="text-decoration: overline;">Overline</span> &MediumSpace;
+  <input type="checkbox" oninput="lineThrough=!lineThrough; textDecoration();"><span style="text-decoration: line-through;">Line-through</span> &MediumSpace;
+  <input type="checkbox" oninput="underline=!underline; textDecoration(underline);"><span style="text-decoration: underline;">Underline</span> &MediumSpace;</p>
+
+     <p> 
+        <input type="radio" class="tdsb" id="solidb" oninput="wavy = false; dotted = false; double =false; dashed = false; setDecorationStyle();" disabled checked> <span style="text-decoration: underline solid;">Solid</span>
+        <input type="radio" class="tdsb" id="wavyb" oninput="wavy = true; dotted = false; double =false; dashed = false; setDecorationStyle();" disabled> <span style="text-decoration: underline wavy;">Wavy</span>
+        <input type="radio" class="tdsb" id="dashedb" oninput="wavy = false; dotted = false; double =false; dashed = true; setDecorationStyle();" disabled> <span style="text-decoration: underline dashed;">Dashed</span>
+        <input type="radio" class="tdsb" id="dottedb" oninput="wavy = false; dotted = true; double =false; dashed = false; setDecorationStyle();" disabled> <span style="text-decoration: underline dotted;">Dotted</span>
+        <input type="radio" class="tdsb" id="doubleb" oninput="wavy = false; dotted = false; double =true; dashed = false; setDecorationStyle();" disabled> <span style="text-decoration: underline double;">Double</span>
+    </p>
+
+
+    <input id="shadows" type="checkbox" onclick="  hasShadow = !hasShadow; setShadow();"> Shadow <br>
+    &ThickSpace; &ThickSpace; Horizontal: <input id="horizontalShadow" type="range" min="-20" max="20" value="2" oninput="setShadowValues();"   disabled> &ThickSpace;
+    Vertical: <input id="verticalShadow" type="range" min="-20" max="20" value="2"  oninput="setShadowValues();" disabled> <br>
+    &ThickSpace; &ThickSpace; Blur: <input id="blurShadow" type="range" min="0" max="10" value="0"  oninput="setShadowValues();" disabled> &ThickSpace;
+    Color: <input id="colorShadow" type="color" value="#ff0000"  oninput="setShadowValues();" disabled>
+
+    <br><br>
+
+    <button onclick="pickSampleText(sampleTextOne)">Sample Text 1</button>
+    <button onclick="pickSampleText(sampleTextTwo)">Sample Text 2</button>
+    <button onclick="sampleTextThree=randomNumericString(sampleTextThree,48); pickSampleText(sampleTextThree)">Random Numbers</button>
+
+    <p id="something">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat? Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur! Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <button onclick="getCSS();">Get CSS code</button>
+
+ <center>
+    <div id="box" >
+        <p id="output"></p>
+        <button onclick="toClipboard(CSSCodeNoFormat);">Copy to Clipboard</button>
+    </div>
+ </center>
+
+<br><br>
+     
+    <div id="signature"><p>Autor: Dante Cardoso Pinto de Almeida</p>
+     <p>License: CC BY-SA</p>
+    </div>
+
+ <script src="textformatingtool.js></script>
+  
+ </body>
+</html>
