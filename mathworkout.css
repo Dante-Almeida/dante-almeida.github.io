@@ -3,7 +3,7 @@
 
     h1{
         font-size: 600%;
-        font-family: cursive, monospace;
+        font-family: cursive;
         }
 
     div{
@@ -45,4 +45,9 @@
         font-size: 20px;
         text-align: center;
     }
+}
+
+
+@media (orientation: landscape){
+    
 }
