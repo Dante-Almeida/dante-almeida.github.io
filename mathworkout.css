@@ -22,8 +22,8 @@
         }
 
     .number{
-        font-size: 60px;
-        width: 100px;
+        font-size: 100px;
+        width: 115px;
         font-family: monospace;
         }
 
@@ -36,7 +36,7 @@
             font-size: 0;
             }
 
-    p{
+    #feedback,#livesleft,#correctanswers{
         font-size: 350%;
     }
 
