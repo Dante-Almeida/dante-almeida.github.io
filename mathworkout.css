@@ -1,6 +1,6 @@
 h1{
-    font-size: 150%;
-    font-family: cursive;
+    font-size: 600%;
+    font-family: cursive, monospace;
     }
 
 div{
@@ -31,6 +31,10 @@ input{
 
 .keys {
         font-size: 0;
+}
+
+p{
+    font-size: 350%;
 }
 
 
