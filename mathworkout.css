@@ -101,6 +101,12 @@
     #feedback,#livesleft,#correctanswers{
         font-size: 350%;
     }
+    
+    p{ 
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        }
 
 
     #signature{
