@@ -42,12 +42,59 @@
 
 
     #signature{
-        font-size: 20px;
+        font-size: 10px;
         text-align: center;
     }
 }
 
 
 @media (orientation: landscape){
+    
+    
+    h1{
+        font-size: 300%;
+        font-family: monospace;
+        }
+
+    div{
+        text-align: center;
+        }
+
+
+    button{
+        font-size: 40px;
+        }
+
+    input{
+        font-size: 40px;
+        width: 100px ;
+        text-align: center;
+        }
+
+    .number{
+        font-size: 100px;
+        width: 115px;
+        font-family: monospace;
+        }
+
+    #problem {
+            text-align: center ;
+            font-family: monospace;
+            }
+
+    .keys {
+            font-size: 0;
+            }
+
+    #feedback,#livesleft,#correctanswers{
+        font-size: 350%;
+    }
+
+
+    #signature{
+        font-size: 10px;
+        text-align: center;
+    }
+}
     
 }
