@@ -98,11 +98,10 @@
             font-size: 0;
             display: flex;
             flex-direction: row;
-            float: left;
             }
 
     #feedback,#livesleft,#correctanswers{
-        font-size: 350%;
+        font-size: 175%;
     }
     
     p{ 
