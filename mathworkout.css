@@ -4,10 +4,14 @@
     h1{
         font-size: 600%;
         font-family: cursive;
+        margin-left: auto;
+        margin-right: auto;
         }
 
     div{
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
         }
 
 
@@ -54,10 +58,14 @@
     h1{
         font-size: 300%;
         font-family: monospace;
+        margin-left: auto;
+        margin-right: auto;
         }
 
     div{
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
         }
 
 
@@ -66,9 +74,11 @@
         }
 
     input{
-        font-size: 40px;
+        font-size: 60px;
         width: 100px ;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
         }
 
     .number{
