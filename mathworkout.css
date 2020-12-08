@@ -96,6 +96,8 @@
 
     .keys {
             font-size: 0;
+            display: flex;
+            flex-direction: row;
             }
 
     #feedback,#livesleft,#correctanswers{
