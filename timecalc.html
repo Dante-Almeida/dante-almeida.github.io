@@ -7,10 +7,10 @@
  <link rel="stylesheet" href="timecalc.css">
 </head>
 <body>
-<center><h2> 	&#9203 TIME CALCULATOR 	&#8987</h2></center>
+<h2> 	&#9203 TIME CALCULATOR 	&#8987</h2>
 <p id="today"></p>
 
-<center><h4>Add or subtract two time measurements</h4>
+<div style="background-color: hsl(214, 41%, 70%)"><h4>Add or subtract two time measurements</h4>
 
 <table>
 <tr>
@@ -38,43 +38,44 @@
 
 
 </table>
-</center>
-
-<center><button onclick="addition()">ADD(+)</button> <button onclick="subtraction() ">SUBTRACT(-) </button>
-
-<center><h4>Multiply or divide a time measurement by a number </h4></center>
-
-<table>
-<tr>
-<th> </th>
-<th>days</th>
-<th>hours</th>
-<th>min.</th>
-<th>sec.</th>
-</tr>
-<tr>
-<th>Measurement</th>
-<td><input type="number" id="day3" ></td>
-<td><input type="number" id="hour3"></td>
-<td><input type="number" id="minute3"></td>
-<td><input type="number" id="second3"></td>
-</tr>
-
-<tr>
-<th>factor/divisor</th>
-<td><input type="number" id="fd"></td>
-
-</tr>
 
 
-</table>
-</center>
+<button onclick="addition()">ADD(+)</button> <button onclick="subtraction() ">SUBTRACT(-) </button>
+ 
+</div>
 
-<center><button onclick="times()">MULTIPLY (x)</button> <button onclick="division() ">DIVIDE (÷) </button></center>
+<div style="background-color: hsl(214, 41%, 85%)"><h4>Multiply or divide a time measurement by a number </h4>
 
-<center><h4>Measure an interval defined by two dates</h4></center>
+ <table>
+  <tr>
+   <th> </th>
+   <th>days</th>
+   <th>hours</th>
+   <th>min.</th>
+   <th>sec.</th>
+  </tr>
+  <tr>
+   <th>Measurement</th>
+   <td><input type="number" id="day3" ></td>
+   <td><input type="number" id="hour3"></td>
+   <td><input type="number" id="minute3"></td>
+   <td><input type="number" id="second3"></td>
+  </tr>
 
-<center>
+  <tr>
+   <th>factor/divisor</th>
+   <td><input type="number" id="fd"></td>
+
+  </tr>
+
+
+  </table>
+
+  <button onclick="times()">MULTIPLY (x)</button> <button onclick="division() ">DIVIDE (÷) </button>
+ </div>
+
+<div style="background-color: hsl(214, 41%, 70%)">
+ <h4>Measure an interval defined by two dates</h4>
 <table>
 <tr>
 
@@ -96,9 +97,9 @@
 </table>
 <button onclick="measureInterval()">MEASURE</button>
 
-</center>
+</div>
 
-<center><h4>Add/subtract a time measurement to/from a date</h4>
+<div style="background-color: hsl(214, 41%, 85%)"><h4>Add/subtract a time measurement to/from a date</h4>
 
 <table>
 <tr>
@@ -120,7 +121,7 @@
 <strong style="font-size: 45px;">date</strong>
 <input type="datetime-local" id="calendar3"> 
 <button onclick="measuredate()">CALCULATE</button>
-</center>
+</div>
 
 <div id="outputbox">
 <p id="out1"></p>
