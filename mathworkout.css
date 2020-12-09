@@ -47,12 +47,12 @@
             }
 
     #feedback{
-            font-size: 290%;
+            font-size: 200%;
             }
 
 
     #signature{
-        font-size: 10px;
+        font-size: 12px;
         text-align: center;
     }
 }
@@ -103,7 +103,8 @@
             display: flex;
             flex-direction: row;
             text-align: center;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
             }
 
     #feedback,#livesleft,#correctanswers{
@@ -118,7 +119,7 @@
 
 
     #signature{
-        font-size: 10px;
+        font-size: 12px;
         text-align: center;
     }
 }
