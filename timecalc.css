@@ -27,7 +27,7 @@ button{
       }
 
 #today{
-       font-size: 18px ;
+       font-size: 12px ;
        text-align: center;
        font-family: monospace ;
       }
@@ -76,6 +76,6 @@ button{
     }
 
 #signature{
-          font-size: 20px;
+          font-size: 15px;
           text-align: center;
           }
