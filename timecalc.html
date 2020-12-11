@@ -7,96 +7,78 @@
  <link rel="stylesheet" href="timecalc.css">
 </head>
 <body>
-<h2> 	&#9203 TIME CALCULATOR 	&#8987</h2>
-<p id="today"></p>
+ <h2> 	&#9203 TIME CALCULATOR 	&#8987</h2>
+ <p id="today"></p>
 
-<div style="background-color: hsl(214, 41%, 70%)"><h4>Add or subtract two time measurements</h4>
-
-<table>
-<tr>
-<th> </th>
-<th>days</th>
-<th>hours</th>
-<th>min.</th>
-<th>sec.</th>
-</tr>
-<tr>
-<th>1st measure</th>
-<td><input type="number" id="dayone" ></td>
-<td><input type="number" id="hourone"></td>
-<td><input type="number" id="minuteone"></td>
-<td><input type="number" id="secondone"></td>
-</tr>
-
-<tr>
-<th>2nd measure</th>
-<td><input type="number" id="daytwo" ></td>
-<td><input type="number" id="hourtwo"></td>
-<td><input type="number" id="minutetwo"></td>
-<td><input type="number" id="secondtwo"></td>
-</tr>
-
-
-</table>
-
-
-<button onclick="addition()">ADD(+)</button> <button onclick="subtraction() ">SUBTRACT(-) </button>
- 
-</div>
-
-<div><h4>Multiply or divide a time measurement by a number </h4>
-
- <table>
+ <div style="background-color: hsl(214, 41%, 70%)"><h4>Add or subtract two time measurements</h4>
+  <table>
+   <tr>
+    <th> </th>
+    <th>days</th>
+    <th>hours</th>
+    <th>min.</th>
+    <th>sec.</th>
+   </tr>
   <tr>
-   <th> </th>
-   <th>days</th>
-   <th>hours</th>
-   <th>min.</th>
-   <th>sec.</th>
-  </tr>
-  <tr>
-   <th>Measurement</th>
-   <td><input type="number" id="day3" ></td>
-   <td><input type="number" id="hour3"></td>
-   <td><input type="number" id="minute3"></td>
-   <td><input type="number" id="second3"></td>
-  </tr>
-
-  <tr>
-   <th>factor/divisor</th>
-   <td><input type="number" id="fd"></td>
-
-  </tr>
-
-
+   <th>1st measure</th>
+    <td><input type="number" id="dayone" ></td>
+    <td><input type="number" id="hourone"></td>
+    <td><input type="number" id="minuteone"></td>
+    <td><input type="number" id="secondone"></td>
+   </tr>
+   <tr>
+    <th>2nd measure</th>
+     <td><input type="number" id="daytwo" ></td>
+     <td><input type="number" id="hourtwo"></td>
+     <td><input type="number" id="minutetwo"></td>
+     <td><input type="number" id="secondtwo"></td>
+   </tr>
   </table>
+  <button onclick="addition()">ADD(+)</button> <button onclick="subtraction() ">SUBTRACT(-) </button>
+  <br>
+ </div>
 
+<div>
+  <h4>Multiply or divide a time measurement by a number </h4>
+  <table>
+   <tr>
+    <th> </th>
+    <th>days</th>
+    <th>hours</th>
+    <th>min.</th>
+    <th>sec.</th>
+   </tr>
+   <tr>
+    <th>Measurement</th>
+    <td><input type="number" id="day3" ></td>
+    <td><input type="number" id="hour3"></td>
+    <td><input type="number" id="minute3"></td>
+    <td><input type="number" id="second3"></td>
+   </tr>
+   <tr>
+    <th>factor/divisor</th>
+    <td><input type="number" id="fd"></td>
+   </tr>
+  </table>
   <button onclick="times()">MULTIPLY (x)</button> <button onclick="division() ">DIVIDE (÷) </button>
  </div>
 
 <div style="background-color: hsl(214, 41%, 70%)">
  <h4>Measure an interval defined by two dates</h4>
-<table>
-<tr>
-
-<th>1st date </th>
-<th> </th>
-<th>2nd date </th>
-
-</tr>
-<tr>
-
-<td><input type="datetime-local" id="calendar1"></td>
-<td> </td>
-<td><input type="datetime-local" id="calendar2"></td>
-
-</tr>
-
-
-
-</table>
-<button onclick="measureInterval()">MEASURE</button>
- <p></p><br>
+ <table>
+  <tr>
+   <th>1st date </th>
+   <th> </th>
+   <th>2nd date </th>
+  </tr>
+  <tr>
+   <td><input type="datetime-local" id="calendar1"></td>
+   <td> </td>
+   <td><input type="datetime-local" id="calendar2"></td>
+  </tr>
+ </table>
+ <button onclick="measureInterval()">MEASURE</button>
+ <br>
 </div>
 
 <div><h4>Add/subtract a time measurement to/from a date</h4>
