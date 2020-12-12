@@ -2,153 +2,142 @@
 
 <!doctype html>
 <html>
-<head>
- <title>Time Calc</title>
- <link rel="stylesheet" href="timecalc.css">
-</head>
-<body>
- <h2> 	&#9203 TIME CALCULATOR 	&#8987</h2>
- <p id="today"></p>
+ <head>
+  <title>Time Calc</title>
+  <link rel="stylesheet" href="timecalc.css">
+ </head>
+ <body>
+  <h2> 	&#9203 TIME CALCULATOR 	&#8987</h2>
+  <p id="today"></p>
 
- <div style="background-color: hsl(214, 41%, 70%)"><h4>Add or subtract two time measurements</h4>
-  <table>
+  <div style="background-color: hsl(214, 41%, 70%)"><h4>Add or subtract two time measurements</h4>
+   <table>
+    <tr>
+     <th> </th>
+     <th>days</th>
+     <th>hours</th>
+     <th>min.</th>
+     <th>sec.</th>
+    </tr>
    <tr>
+    <th>1st measure</th>
+     <td><input type="number" id="dayone" ></td>
+     <td><input type="number" id="hourone"></td>
+     <td><input type="number" id="minuteone"></td>
+     <td><input type="number" id="secondone"></td>
+    </tr>
+    <tr>
+     <th>2nd measure</th>
+      <td><input type="number" id="daytwo" ></td>
+      <td><input type="number" id="hourtwo"></td>
+      <td><input type="number" id="minutetwo"></td>
+      <td><input type="number" id="secondtwo"></td>
+    </tr>
+   </table>
+   <button onclick="addition()">ADD(+)</button> <button onclick="subtraction() ">SUBTRACT(-) </button>
+   <p></p><br>
+  </div>
+
+  <div>
+   <h4>Multiply or divide a time measurement by a number </h4>
+   <table>
+    <tr>
+     <th> </th>
+     <th>days</th>
+     <th>hours</th>
+     <th>min.</th>
+     <th>sec.</th>
+    </tr>
+    <tr>
+     <th>Measurement</th>
+     <td><input type="number" id="day3" ></td>
+     <td><input type="number" id="hour3"></td>
+     <td><input type="number" id="minute3"></td>
+     <td><input type="number" id="second3"></td>
+    </tr>
+    <tr>
+     <th>factor/divisor</th>
+     <td><input type="number" id="fd"></td>
+    </tr>
+   </table>
+   <button onclick="times()">MULTIPLY (x)</button> <button onclick="division() ">DIVIDE (÷) </button>
+  </div>
+
+  <div style="background-color: hsl(214, 41%, 70%)">
+   <h4>Measure an interval defined by two dates</h4>
+   <table>
+   <tr>
+    <th>1st date </th>
     <th> </th>
-    <th>days</th>
-    <th>hours</th>
-    <th>min.</th>
-    <th>sec.</th>
-   </tr>
-  <tr>
-   <th>1st measure</th>
-    <td><input type="number" id="dayone" ></td>
-    <td><input type="number" id="hourone"></td>
-    <td><input type="number" id="minuteone"></td>
-    <td><input type="number" id="secondone"></td>
+    <th>2nd date </th>
    </tr>
    <tr>
-    <th>2nd measure</th>
-     <td><input type="number" id="daytwo" ></td>
-     <td><input type="number" id="hourtwo"></td>
-     <td><input type="number" id="minutetwo"></td>
-     <td><input type="number" id="secondtwo"></td>
+    <td><input type="datetime-local" id="calendar1"></td>
+    <td> </td>
+    <td><input type="datetime-local" id="calendar2"></td>
    </tr>
   </table>
-  <button onclick="addition()">ADD(+)</button> <button onclick="subtraction() ">SUBTRACT(-) </button>
+  <button onclick="measureInterval()">MEASURE</button>
+   <p></p><br>
+ </div>
+ 
+  <div>
+   <h4>Add/subtract a time measurement to/from a date</h4>
+   <table>
+    <tr>
+     <th> </th>
+     <th>days</th>
+     <th>hours</th>
+     <th>min.</th>
+     <th>sec.</th>
+    </tr>
+    <tr>
+     <th>measurement</th>
+     <td><input type="number" id="dayfour" ></td>
+     <td><input type="number" id="hourfour"></td>
+     <td><input type="number" id="minutefour"></td>
+     <td><input type="number" id="secondfour"></td>
+    </tr>
+   </table>
+   <strong style="font-size: 45px;">date</strong>
+   <input type="datetime-local" id="calendar3"> 
+   <button onclick="measuredate()">CALCULATE</button>
+   <br>
+  </div>
+  
+  <div id="outputbox">
+   <p id="out1"></p>
+   <p id="out2" ></p>
+   <p id="out3"></p>
+   <div id="convertion">
+    <p id="outsec"></p>
+    <p id="outmin"></p>
+    <p id="outhour"></p>
+    <p id="outday"></p>
+    <p id="outweek"></p>
+    <p id="outmonth"></p>
+    <p id="outyear"></p>
+    <p id="outle"></p>
+   </div>
+   <p id="outago"></p>
+   <p id="outfromnow"></p>
+   <p class="bar"> </p>
+   <p id="out4"></p>
+   <p class="bar"> </p>
+   <p id="out5"></p>
+   <p id="out6"></p>
+   <div id="distances">
+    <p id="outearthrad"></p>
+    <p id="outearthmoon"></p>
+    <p id="outearthsun"></p>
+    <p id="outsunalpha"></p>
+   </div>
+  </div>
   <br>
- </div>
-
-<div>
-  <h4>Multiply or divide a time measurement by a number </h4>
-  <table>
-   <tr>
-    <th> </th>
-    <th>days</th>
-    <th>hours</th>
-    <th>min.</th>
-    <th>sec.</th>
-   </tr>
-   <tr>
-    <th>Measurement</th>
-    <td><input type="number" id="day3" ></td>
-    <td><input type="number" id="hour3"></td>
-    <td><input type="number" id="minute3"></td>
-    <td><input type="number" id="second3"></td>
-   </tr>
-   <tr>
-    <th>factor/divisor</th>
-    <td><input type="number" id="fd"></td>
-   </tr>
-  </table>
-  <button onclick="times()">MULTIPLY (x)</button> <button onclick="division() ">DIVIDE (÷) </button>
- </div>
-
-<div style="background-color: hsl(214, 41%, 70%)">
- <h4>Measure an interval defined by two dates</h4>
- <table>
-  <tr>
-   <th>1st date </th>
-   <th> </th>
-   <th>2nd date </th>
-  </tr>
-  <tr>
-   <td><input type="datetime-local" id="calendar1"></td>
-   <td> </td>
-   <td><input type="datetime-local" id="calendar2"></td>
-  </tr>
- </table>
- <button onclick="measureInterval()">MEASURE</button>
- <br>
-</div>
-
-<div><h4>Add/subtract a time measurement to/from a date</h4>
-
-<table>
-<tr>
-<th> </th>
-<th>days</th>
-<th>hours</th>
-<th>min.</th>
-<th>sec.</th>
-</tr>
-<tr>
-<th>measurement</th>
-<td><input type="number" id="dayfour" ></td>
-<td><input type="number" id="hourfour"></td>
-<td><input type="number" id="minutefour"></td>
-<td><input type="number" id="secondfour"></td>
-</tr>
-
-</table>
-<strong style="font-size: 45px;">date</strong>
-<input type="datetime-local" id="calendar3"> 
-<button onclick="measuredate()">CALCULATE</button>
- <p></p><br>
-</div>
-
-<div id="outputbox">
-<p id="out1"></p>
-<p id="out2" ></p>
-<p id="out3"></p>
-<div id="convertion">
-<p id="outsec"></p>
-<p id="outmin"></p>
-<p id="outhour"></p>
-<p id="outday"></p>
-<p id="outweek"></p>
-<p id="outmonth"></p>
-<p id="outyear"></p>
-<p id="outle"></p>
-</div>
-
-<p id="outago"></p>
-<p id="outfromnow"></p>
-
-<p class="bar"> </p>
-<p id="out4"></p>
-<p class="bar"> </p>
-<p id="out5"></p>
-<p id="out6"></p>
-
-<div id="distances">
- 
- <p id="outearthrad"></p>
- <p id="outearthmoon"></p>
- <p id="outearthsun"></p>
- <p id="outsunalpha"></p>
- 
- 
-</div>
-
-</div>
-<br>
-
-     <div id="signature"><p style="font-size: 15px;">Autor: Dante Cardoso Pinto de Almeida</p>
-     <p style="font-size: 15px;">License: CC BY-SA</p>
-     </div>
-<br><br>
- <script src="timecalc.js"></script>
-
-    </body>
-    
+  <div id="signature"><p style="font-size: 15px;">Autor: Dante Cardoso Pinto de Almeida</p>
+   <p style="font-size: 15px;">License: CC BY-SA</p>
+  </div>
+  <br><br>
+  <script src="timecalc.js"></script>
+ </body> 
 </html>
