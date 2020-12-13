@@ -122,6 +122,35 @@
           font-weight: bold;
           background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) ;
           }
+     
+     
+     #out2{
+          font-weight: bold;
+          font-family: monospace;
+          font-size: 30px ;
+          }
+
+     #outputbox{
+               border: solid 1px lightGray;
+               background-color: gainsboro;
+               border-radius: 5px;
+               margin-top: 5px;
+               color: black ;
+               }
+
+     #convertion{
+               text-align: right;           
+               }
+
+     #out5{
+          font-weight: bold;
+          font-size: 30px ;
+          }
+
+     #distances{
+               text-align: right;               
+               }
+
 
      #signature{
                font-size: 15px;
