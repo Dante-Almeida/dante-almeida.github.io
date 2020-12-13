@@ -122,7 +122,7 @@
           }
      
      
-     input{
+     input[type=number]{
           width: 100px;
           height: 190%;
           font-size: 250%;
