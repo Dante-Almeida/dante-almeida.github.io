@@ -114,6 +114,20 @@
     .odd{
           background-color: hsl(150, 41%, 85%);
         }
+     
+     
+     table{
+          margin-left:auto; 
+          margin-right:auto;
+          }
+     
+     
+     input{
+          width: 100px;
+          height: 190%;
+          font-size: 250%;
+          text-align: center;
+          }
 
      
        .bar{
