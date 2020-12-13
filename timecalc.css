@@ -5,6 +5,11 @@ body {
      margin: auto;
      }
 
+table{
+     margin-left:auto; 
+     margin-right:auto;
+     }
+
 h2{
   text-decoration: underline overline dashed darkslategray ;
   font-size: 300%;
