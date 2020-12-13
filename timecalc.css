@@ -10,6 +10,11 @@ table{
      margin-right:auto;
      }
 
+.mainout{
+          text-align: left;
+          float: left;
+          }
+
 h2{
   text-decoration: underline overline dashed darkslategray ;
   font-size: 300%;
