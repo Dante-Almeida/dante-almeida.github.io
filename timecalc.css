@@ -15,6 +15,12 @@
           text-align: left;
           font-size: 25px;
           }
+     
+      
+    .odd{
+        style="background-color: hsl(214, 41%, 70%)"
+        }
+
 
      h2{
           text-decoration: underline overline dashed darkslategray ;
