@@ -1,91 +1,93 @@
-body {
-     font-family: Serif;
-     background-color: lightSteelBlue ;
-     text-align: center;
-     margin: auto;
-     }
+@media (orientation: portrait){
+     body {
+          font-family: Serif;
+          background-color: lightSteelBlue ;
+          text-align: center;
+          margin: auto;
+          }
 
-table{
-     margin-left:auto; 
-     margin-right:auto;
-     }
+     table{
+          margin-left:auto; 
+          margin-right:auto;
+          }
 
-.mainout{
+     .mainout{
           text-align: left;
           font-size: 25px;
           }
 
-h2{
-  text-decoration: underline overline dashed darkslategray ;
-  font-size: 300%;
-  }
-
-input{
-     width: 120px;
-     height: 200%;
-     font-size: 300%;
-    }
-
-th{
-  font-size: 37px;
-  }
-
-button{
-      border-radius: 5px ;
-      font-family: monospace;
-      font-size: 250%;
-      }
-
-#today{
-       font-size: 12px ;
-       text-align: center;
-       font-family: monospace ;
-      }
-
-#out2{
-     font-weight: bold;
-     font-family: monospace;
-     font-size: 30px ;
-     }
-
-#outputbox{
-           border: solid 1px lightGray;
-           background-color: gainsboro;
-           border-radius: 5px;
-           margin-top: 5px;
-           color: black ;
+     h2{
+          text-decoration: underline overline dashed darkslategray ;
+          font-size: 300%;
           }
 
-#convertion{
-            text-align: right;
-            font-family: monospace ;
-            }
+     input{
+          width: 120px;
+          height: 200%;
+          font-size: 300%;
+          }
 
-#out5{
-      font-weight: bold;
-      font-family: monospace;
-      font-size: 30px ;
-      }
+     th{
+          font-size: 37px;
+          }
 
-#distances{
-          text-align: right;
+     button{
+          border-radius: 5px ;
+          font-family: monospace;
+          font-size: 250%;
+          }
+
+     #today{
+          font-size: 12px ;
+          text-align: center;
           font-family: monospace ;
           }
 
-#calendar1, #calendar2, #calendar3{
-          width: 300px;
-          height: 200%;
-          font-size: 200%;
+     #out2{
+          font-weight: bold;
+          font-family: monospace;
+          font-size: 30px ;
           }
 
-.bar{
-    width: 100%;
-    height: 4px ;
-    font-weight: bold;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) ;
-    }
+     #outputbox{
+               border: solid 1px lightGray;
+               background-color: gainsboro;
+               border-radius: 5px;
+               margin-top: 5px;
+               color: black ;
+               }
 
-#signature{
-          font-size: 15px;
-          text-align: center;
+     #convertion{
+               text-align: right;
+               font-family: monospace ;
+               }
+
+     #out5{
+          font-weight: bold;
+          font-family: monospace;
+          font-size: 30px ;
           }
+
+     #distances{
+               text-align: right;
+               font-family: monospace ;
+               }
+
+     #calendar1, #calendar2, #calendar3{
+                                        width: 300px;
+                                        height: 200%;
+                                        font-size: 200%;
+                                        }
+
+     .bar{
+          width: 100%;
+          height: 4px ;
+          font-weight: bold;
+          background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) ;
+          }
+
+     #signature{
+               font-size: 15px;
+               text-align: center;
+               }
+}
