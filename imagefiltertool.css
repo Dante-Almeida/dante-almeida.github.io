@@ -60,7 +60,7 @@ input{
 
 input[type=range] {
                     width: 100%;
-                    height: 10px;
+                    height: 20px;
                     margin: 7.3px 0;
                     background-color: transparent;
                     -webkit-appearance: none;
@@ -72,6 +72,7 @@ input[type=range]:focus {
 
 input[type=range]::-webkit-slider-runnable-track {
                                                     background: rgba(48, 113, 169, 0.78);
+                                                    height: 20px;
                                                     border: 0.2px solid #010101;
                                                     border-radius: 1.3px;
                                                     width: 100%;
@@ -96,6 +97,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 input[type=range]::-moz-range-track {
                                     background: rgba(48, 113, 169, 0.78);
+                                    height: 20px;
                                     border: 0.2px solid #010101;
                                     border-radius: 1.3px;
                                     width: 100%;
@@ -112,37 +114,42 @@ input[type=range]::-moz-range-thumb {
                                     cursor: pointer;
                                     }
 input[type=range]::-ms-track {
-  background: transparent;
-  border-color: transparent;
-  border-width: 8.2px 0;
-  color: transparent;
-  width: 100%;
-  height: 11.4px;
-  cursor: pointer;
-}
+                                background: transparent;
+                                border-color: transparent;
+                                border-width: 8.2px 0;
+                                color: transparent;
+                                width: 100%;
+                                height: 11.4px;
+                                cursor: pointer;
+                            }
+
 input[type=range]::-ms-fill-lower {
-  background: #2a6495;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-}
+                                    background: #2a6495;
+                                    border: 0.2px solid #010101;
+                                    border-radius: 2.6px;
+                                    }
+
 input[type=range]::-ms-fill-upper {
-  background: rgba(48, 113, 169, 0.78);
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-}
+                                    background: rgba(48, 113, 169, 0.78);
+                                    border: 0.2px solid #010101;
+                                    border-radius: 2.6px;
+                                    }
+
 input[type=range]::-ms-thumb {
-  width: 26px;
-  height: 26px;
-  background: #feffff;
-  border: 1.8px solid #00001e;
-  border-radius: 15px;
-  cursor: pointer;
-  margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
-}
+                                width: 26px;
+                                height: 26px;
+                                background: #feffff;
+                                border: 1.8px solid #00001e;
+                                border-radius: 15px;
+                                cursor: pointer;
+                                margin-top: 0px;
+                               /*Needed to keep the Edge thumb centred*/
+                            }
+
 input[type=range]:focus::-ms-fill-lower {
-  background: rgba(48, 113, 169, 0.78);
-}
+                                        background: rgba(48, 113, 169, 0.78);
+                                        }
+
 input[type=range]:focus::-ms-fill-upper {
-  background: #367ebd;
-}
+                                        background: #367ebd;
+                                        }
