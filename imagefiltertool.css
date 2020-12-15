@@ -1,76 +1,76 @@
-
-body{
-    font-size: 50px;
-    }
-
-button, select{
-        font-size: 40px;
+@media (orientation: portrait){
+    body{
+        font-size: 50px;
         }
 
-input[type=checkbox] {
-                       transform: scale(3);
+    button, select{
+                    font-size: 40px;
                     }
 
-img {
-    width: 50%;
-    }
-
-h1{
-    text-align: center;  
-    }
-
-table{
-    width: 100%;  
-    }
-
-.ranger{
-        width: 75%;
-        }
-
-input{
-    width: 100%;
-    }
-
-.disabled{
-        color: lightGray;
-        }
-
-.enabled{
-        color:black;
-        }
-
-
-#box{
-    text-align: center;  
-    width: 60%;
-    background-color: lavender;
-    border: solid black 1px;
-    border-radius: 10px;
-    }
-
-
-#signature{
-    font-size: 10px;
-    text-align: center;
-}
-
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-
-/*Created with http://danielstern.ca/range.css/#/*/
-
-input[type=range] {
-                    width: 100%;
-                    height: 20px;
-                    margin: 7.3px 0;
-                    background-color: transparent;
-                    -webkit-appearance: none;
-                    }
-
-input[type=range]:focus {
-                        outline: none;
+    input[type=checkbox] {
+                        transform: scale(3);
                         }
 
-input[type=range]::-webkit-slider-runnable-track {
+    img {
+        width: 50%;
+        }
+
+    h1{
+        text-align: center;  
+        }
+
+    table{
+        width: 100%;  
+        }
+
+    .ranger{
+            width: 75%;
+            }
+
+    input{
+        width: 100%;
+        }
+
+    .disabled{
+            color: lightGray;
+            }
+
+    .enabled{
+            color:black;
+            }
+
+
+    #box{
+        text-align: center;  
+        width: 60%;
+        background-color: lavender;
+        border: solid black 1px;
+        border-radius: 10px;
+        }
+
+
+    #signature{
+            font-size: 10px;
+            text-align: center;
+            }
+
+    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+    /*Created with http://danielstern.ca/range.css/#/*/
+
+    input[type=range] {
+                        width: 100%;
+                        height: 20px;
+                        margin: 7.3px 0;
+                        background-color: transparent;
+                        -webkit-appearance: none;
+                        }
+
+    input[type=range]:focus {
+                            outline: none;
+                            }
+
+    input[type=range]::-webkit-slider-runnable-track {
                                                     background: rgba(48, 113, 169, 0.78);
                                                     height: 20px;
                                                     border: 0.2px solid #010101;
@@ -78,78 +78,79 @@ input[type=range]::-webkit-slider-runnable-track {
                                                     width: 100%;
                                                     height: 11.4px;
                                                     cursor: pointer;
-                                                }
+                                                    }
 
-input[type=range]::-webkit-slider-thumb {
-                                        margin-top: -7.5px;
+    input[type=range]::-webkit-slider-thumb {
+                                            margin-top: -7.5px;
+                                            width: 26px;
+                                            height: 26px;
+                                            background: #feffff;
+                                            border: 1.8px solid #00001e;
+                                            border-radius: 15px;
+                                            cursor: pointer;
+                                            -webkit-appearance: none;
+                                            }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+                                                            background: #367ebd;
+                                                            }
+
+    input[type=range]::-moz-range-track {
+                                        background: rgba(48, 113, 169, 0.78);
+                                        height: 20px;
+                                        border: 0.2px solid #010101;
+                                        border-radius: 1.3px;
+                                        width: 100%;
+                                        height: 11.4px;
+                                        cursor: pointer;
+                                        }
+
+    input[type=range]::-moz-range-thumb {
                                         width: 26px;
                                         height: 26px;
                                         background: #feffff;
                                         border: 1.8px solid #00001e;
                                         border-radius: 15px;
                                         cursor: pointer;
-                                        -webkit-appearance: none;
                                         }
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-                                                        background: #367ebd;
-                                                        }
-
-input[type=range]::-moz-range-track {
-                                    background: rgba(48, 113, 169, 0.78);
-                                    height: 20px;
-                                    border: 0.2px solid #010101;
-                                    border-radius: 1.3px;
+    input[type=range]::-ms-track {
+                                    background: transparent;
+                                    border-color: transparent;
+                                    border-width: 8.2px 0;
+                                    color: transparent;
                                     width: 100%;
                                     height: 11.4px;
                                     cursor: pointer;
-                                    }
+                                }
 
-input[type=range]::-moz-range-thumb {
+    input[type=range]::-ms-fill-lower {
+                                        background: #2a6495;
+                                        border: 0.2px solid #010101;
+                                        border-radius: 2.6px;
+                                        }
+
+    input[type=range]::-ms-fill-upper {
+                                        background: rgba(48, 113, 169, 0.78);
+                                        border: 0.2px solid #010101;
+                                        border-radius: 2.6px;
+                                        }
+
+    input[type=range]::-ms-thumb {
                                     width: 26px;
                                     height: 26px;
                                     background: #feffff;
                                     border: 1.8px solid #00001e;
                                     border-radius: 15px;
                                     cursor: pointer;
-                                    }
-input[type=range]::-ms-track {
-                                background: transparent;
-                                border-color: transparent;
-                                border-width: 8.2px 0;
-                                color: transparent;
-                                width: 100%;
-                                height: 11.4px;
-                                cursor: pointer;
-                            }
+                                    margin-top: 0px;
+                                /*Needed to keep the Edge thumb centred*/
+                                }
 
-input[type=range]::-ms-fill-lower {
-                                    background: #2a6495;
-                                    border: 0.2px solid #010101;
-                                    border-radius: 2.6px;
-                                    }
-
-input[type=range]::-ms-fill-upper {
-                                    background: rgba(48, 113, 169, 0.78);
-                                    border: 0.2px solid #010101;
-                                    border-radius: 2.6px;
-                                    }
-
-input[type=range]::-ms-thumb {
-                                width: 26px;
-                                height: 26px;
-                                background: #feffff;
-                                border: 1.8px solid #00001e;
-                                border-radius: 15px;
-                                cursor: pointer;
-                                margin-top: 0px;
-                               /*Needed to keep the Edge thumb centred*/
-                            }
-
-input[type=range]:focus::-ms-fill-lower {
-                                        background: rgba(48, 113, 169, 0.78);
-                                        }
-
-input[type=range]:focus::-ms-fill-upper {
-                                        background: #367ebd;
-                                        }
+    input[type=range]:focus::-ms-fill-lower {
+                                            background: rgba(48, 113, 169, 0.78);
+                                            }
+    
+    input[type=range]:focus::-ms-fill-upper {
+                                            background: #367ebd;
+                                            }
+}
