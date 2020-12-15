@@ -1,88 +1,90 @@
-body{
-    text-align: center;
-    }
-
-h1{
-   font-size: 400%;
-    }
-
-#timer{
-        font-size: 50px;
+@media (orientation: portrait){
+    body{
         text-align: center;
-        font-family: monospace;
-        background-color: lightblue;
-        width: 20%;
-        border: solid black 3px;
-        border-radius: 15px;
+        }
+
+    h1{
+        font-size: 400%;
+        }
+
+    #timer{
+            font-size: 50px;
+            text-align: center;
+            font-family: monospace;
+            background-color: lightblue;
+            width: 20%;
+            border: solid black 3px;
+            border-radius: 15px;
+            margin: auto;
+            }
+
+
+    button{
+            width: 120px;
+            height: 120px;
+            font-weight: bold;
+            font-size: 70px;
+            border-radius: 60px;
+            display: inline;
+            }
+
+
+    #startButton{
+            font-size: 250%;
+            width: 20%;
+            height: 250%;
+            }
+
+
+    #container{
+            width: 50%;
+            margin: auto;
+            }
+
+
+    #firstValue{
+                font-size: 100px;
+                font-weight: bold;
+                font-family: sans-serif;
+                height: 90%;
+                padding: 10px 0;
+                }
+
+
+    #secondValue{
+                font-size: 100px;
+                font-weight: bold;
+                font-family: sans-serif;
+                height: 100%;
+                padding: 10px 0;
+                }
+
+
+    #buttons{
+        display: inline;
+        width: 30%;
+        }
+
+
+    .div{
+        display: inline;  
         margin: auto;
         }
 
 
-button{
-        width: 120px;
-        height: 120px;
-        font-weight: bold;
-        font-size: 70px;
-        border-radius: 60px;
-        display: inline;
-        }
+    #instructions{
+                font-size: 280%;
+                height: 180%;
+                width: 35%;
+                }
 
 
-#startButton{
-    font-size: 250%;
-    width: 20%;
-    height: 250%;
+    #signature{
+                font-size: 20px;
+                text-align: center;
+                }
+
+    #feedback{
+            font-size: 200%;
+            }
 }
-
-
-#container{
-  width: 50%;
-  margin: auto;
-}
-
-
-#firstValue{
-            font-size: 100px;
-            font-weight: bold;
-            font-family: sans-serif;
-            height: 90%;
-            padding: 10px 0;
-            }
-
-
-#secondValue{
-            font-size: 100px;
-            font-weight: bold;
-            font-family: sans-serif;
-            height: 100%;
-            padding: 10px 0;
-            }
-
-
-#buttons{
-    display: inline;
-    width: 30%;
-    }
-
-
-.div{
-    display: inline;  
-    margin: auto;
-    }
-
-
-#instructions{
-            font-size: 280%;
-            height: 180%;
-            width: 35%;
-            }
-
-
-#signature{
-            font-size: 20px;
-            text-align: center;
-            }
-
-#feedback{
-        font-size: 200%;
-        }
