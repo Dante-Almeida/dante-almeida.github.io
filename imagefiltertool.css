@@ -7,6 +7,10 @@ button{
         font-size: 50px;
         }
 
+input[type=checkbox] {
+                       transform: scale(3);
+                    }
+
 img {
     width: 50%;
     }
