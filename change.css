@@ -1,0 +1,15 @@
+body {
+        text-align: center;
+        margin: auto;
+        }
+
+button{
+        font-size: 20px;
+        margin: auto;
+        }
+
+.add,.sub{
+        font-size: 30px;
+        font-weight: bold;
+        width: 100%;
+            }
