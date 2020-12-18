@@ -1,0 +1,19 @@
+body{
+    background: linear-gradient(135deg, rgb(225,215,152), rgb(103,86,69), rgb(77,120,78), rgb(110,161,113));
+    }
+
+h1{
+  text-align: center;
+  font-family: monospace;
+  }
+
+textarea{
+        background-color: white;
+        font-family: monospace;
+        text-align: justify;
+        }
+
+#signature{
+        font-size: 10px;
+        text-align: center;
+        }
