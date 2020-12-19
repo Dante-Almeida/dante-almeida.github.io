@@ -1,24 +1,25 @@
 body {
-        text-align: center;
-        margin: auto;
-        font-size: 60px;
-        }
-
+ text-align: center;
+ margin: auto;
+}
 button{
-        font-size: 60px;
-        margin: auto;
-        }
-
+font-size: 20px;
+margin: auto;
+} 
 .add,.sub{
-        font-size: 70px;
-        font-weight: bold;
-        width: 100%;
-            }
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+}
 
- p{
-  font-size: 60px;
-  }
+#monologue{
+  font-size: 1px;
+  color: lightgray;
+}
 
-  td{
-     font-size: 65px;
-     }
+
+#signature{
+    
+    font-size: 10px;
+    text-align: center;
+}
