@@ -2,32 +2,38 @@
 <html>
  <head>
   <title></title>
-  <link rel="stylesheet" href="change.css">
+  <link rel="stylesheet" href="style.css">
  </head>
  <body>
-   <h4>CHANGE MATH WORKOUT</h4>
+   <h2 id="title" style="text-align: center;">RETURN THE CHANGE MATH WORKOUT</h2>
    <p>Set difficulty: <input type="radio" id="easy" onclick="setDifficulty('easy')">Easy &MediumSpace; <input type="radio" id="medium" onclick="setDifficulty('medium')">Medium &MediumSpace; <input type="radio" id="hard" onclick="setDifficulty('hard')">Hard</p>
    <button id="start" onclick="startGame();">START GAME</button>
-   <p id="livesleft">Lives: ❤❤❤</p>
-   <p id="points">Points: 0  &MediumSpace; Goal:</p>
+    <p id="livesleft">Lives: ❤❤❤</p>
+    <p id="points">Points: 0  &MediumSpace; Goal:</p>
    <p id="feedback">PRESS "START GAME"</p>
 
+    <div id="monologue">
    <p>The costumer is buying $<spam id="price">0</spam> worth of merchandise.</p>
-   <p>The costumer is paying with $<spam id="payment">0</spam>.</p>
+    <p>The costumer is paying with $<spam id="payment">0</spam>.</p>
    <p>Set the correct change: <spam id="change">$0.00</spam></p>
-
+    </div>
     <div>
    <table style="text-align: center; margin: auto; font-size: 18px;">
      <tr><td id="oneC">0</td><td id="fiveC">0</td><td id="tenC">0</td><td id="twentyfiveC">0</td><td id="fiftyC">0</td><td id="oneD">0</td><td id="twoD">0</td><td id="fiveD">0</td><td id="tenD">0</td></tr>
-     <tr><td><button onclick="oneCent++; setChange()" class="add">+</button></td><td><button onclick="fiveCent++; setChange();" class="add">+</button></td><td><button onclick="tenCent++; setChange();" class="add">+</button></td><td><button onclick="twentyfiveCent++; setChange();" class="add">+</button></td><td><button onclick="fiftyCent++; setChange();" class="add">+</button></td><td><button onclick="oneDolar++; setChange()" class="add">+</button></td><td><button onclick="twoDolar++; setChange();" class="add">+</button></td><td><button onclick="fiveDolar++; setChange()" class="add">+</button></td><td><button onclick="tenDolar++; setChange();" class="add">+</button></td></tr>
+     <tr><td><button onclick="oneCent++; setChange()" class="add">+</button></td><td><button onclick="fiveCent++; setChange();" class="add">+</button></td><td><button onclick="tenCent++; setChange();" class="add">+</button></td><td><button onclick="twentyfiveCent++; setChange();" class="add">+</button></td><td><button onclick="fiftyCent++; setChange();" class="add">+</button></td><td><button onclick="oneDollar++; setChange()" class="add">+</button></td><td><button onclick="twoDollar++; setChange();" class="add">+</button></td><td><button onclick="fiveDollar++; setChange()" class="add">+</button></td><td><button onclick="tenDollar++; setChange();" class="add">+</button></td></tr>
      <tr><td>1¢</td><td>5¢</td><td>10¢</td><td>25¢</td><td>50¢</td><td>$1</td><td>$2</td><td>$5</td><td>$10</td></tr>
      
-     <tr><td><button onclick="oneCent=monus(oneCent); setChange()" class="sub">-</button></td><td><button onclick="fiveCent=monus(fiveCent); setChange();" class="sub">-</button></td><td><button onclick="tenCent=monus(tenCent); setChange();" class="sub">-</button></td><td><button onclick="twentyfiveCent=monus(twentyfiveCent); setChange();" class="sub">-</button></td><td><button onclick="fiftyCent=monus(fiftyCent); setChange();" class="sub">- </button></td><td><button onclick="oneDolar=monus(oneDolar); setChange()" class="sub">-</button></td><td><button onclick="twoDolar=monus(twoDolar); setChange();" class="sub">-</button></td><td><button onclick="fiveDolar=monus(fiveDolar); setChange()" class="sub">-</button></td><td><button onclick="tenDolar=monus(tenDolar); setChange();" class="sub">-</button></td></tr> </table>
+     <tr><td><button onclick="oneCent=monus(oneCent); setChange()" class="sub">-</button></td><td><button onclick="fiveCent=monus(fiveCent); setChange();" class="sub">-</button></td><td><button onclick="tenCent=monus(tenCent); setChange();" class="sub">-</button></td><td><button onclick="twentyfiveCent=monus(twentyfiveCent); setChange();" class="sub">-</button></td><td><button onclick="fiftyCent=monus(fiftyCent); setChange();" class="sub">- </button></td><td><button onclick="oneDollar=monus(oneDollar); setChange()" class="sub">-</button></td><td><button onclick="twoDollar=monus(twoDollar); setChange();" class="sub">-</button></td><td><button onclick="fiveDollar=monus(fiveDollar); setChange()" class="sub">-</button></td><td><button onclick="tenDollar=monus(tenDollar); setChange();" class="sub">-</button></td></tr> </table>
 ​     </div>
-    <br>
-    <button id="returnButton" onclick="returnChange();" disabled>RETURN CHANGE</button>
+<br>
+<button id="returnButton" onclick="returnChange();" disabled>RETURN CHANGE</button>
 
+​<br>
+
+    <div id="signature"><p>Autor: Dante Cardoso Pinto de Almeida</p>
+     <p>License: CC BY-SA</p>
+    </div>
 ​
-  <script src="change.js"></script>
+  <script src="script.js"></script>
  </body>
 </html>
