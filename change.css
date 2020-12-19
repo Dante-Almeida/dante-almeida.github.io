@@ -1,3 +1,8 @@
+@media (orientation: portrait){
+                              -moz-transform: scale(1.5);
+                              zoom: 150%;
+                              }
+
 body {
      text-align: center;
      margin: auto;
