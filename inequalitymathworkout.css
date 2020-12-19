@@ -91,6 +91,14 @@
 
 
 @media (orientation: landscape){
+    
+     
+
+ *{
+   -moz-transform: scale(0.6);
+    zoom: 60%;
+    }
+    
     body{
         text-align: center;
         }
