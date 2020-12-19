@@ -20,11 +20,11 @@
 
 
     button{
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             font-weight: bold;
             font-size: 110px;
-            border-radius: 60px;
+            border-radius: 80px;
             display: inline;
             }
 
