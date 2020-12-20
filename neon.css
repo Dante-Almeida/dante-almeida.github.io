@@ -1,0 +1,83 @@
+#placard{
+line-height: 6px;
+background-color: black;
+height: 305px;
+}
+
+.words{
+font-family: cursive;
+font-size: 80px;
+font-weight: bold;
+}
+
+#redOff{
+color: darkRed;
+text-align: left;
+}
+
+#purpleOff{
+text-align: center;
+color: purple;
+}
+
+#blueOff{
+text-align: right;
+color: darkBlue;
+}
+
+
+#redOn {
+  font-size: 80px;
+  color: #f22;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: rot 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes rot {
+  from {
+    text-shadow: 0 0 10px #f00, 0 0 20px #fdd, 0 0 30px #f60000, 0 0 40px #f60033, 0 0 50px #f60133, 0 0 60px #f60133, 0 0 70px #fd1033;
+  }
+  to {
+    text-shadow: 0 0 20px #f22, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff4000, 0 0 60px #ff0000, 0 0 70px #ff4000, 0 0 80px #ff4d00;
+  }
+}
+
+
+#purpleOn {
+  font-size: 80px;
+  color: #f7f;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: und 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes und {
+  from {
+    text-shadow: 0 0 10px #f0f, 0 0 20px #fdf, 0 0 30px #f600f9, 0 0 40px #f600f3, 0 0 50px #f600ff, 0 0 60px #f600ff, 0 0 70px #f600ff;
+  }
+  to {
+    text-shadow: 0 0 20px #f2f, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff4000, 0 0 60px #ff00ff, 0 0 70px #ff40ff, 0 0 80px #ff4dff;
+  }
+}
+
+
+#blueOn {
+  font-size: 80px;
+  text-align: right;
+  color: #33f;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: blau 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes blau {
+  from {
+    text-shadow: 0 0 10px #22f, 0 0 20px #33f, 0 0 30px #4040f9, 0 0 40px #0604f3, 0 0 50px #0604ff, 0 0 60px #0604ff, 0 0 70px #0604ff;
+  }
+  to {
+    text-shadow: 0 0 20px #32f, 0 0 30px #1004ff, 0 0 40px #0400ff, 0 0 50px #6666ff, 0 0 60px #2402ff, 0 0 70px #4440ff, 0 0 80px #444dff;
+  }
+}
