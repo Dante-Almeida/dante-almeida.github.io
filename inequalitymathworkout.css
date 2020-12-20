@@ -115,10 +115,10 @@
 
 
     button{
-            width: 110px;
-            height: 110px;
+            width: 120px;
+            height: 120px;
             font-weight: bold;
-            font-size: 80px;
+            font-size: 70px;
             border-radius: 55px;
             display: inline;
             }
@@ -131,13 +131,13 @@
 
 
     #container{
-            width: 50%;
+            width: 60%;
             margin: auto;
             }
 
 
     #firstValue{
-                font-size: 80px;
+                font-size: 70px;
                 font-weight: bold;
                 font-family: sans-serif;
                 height: 90%;
@@ -146,7 +146,7 @@
 
 
     #secondValue{
-                font-size: 80px;
+                font-size: 70px;
                 font-weight: bold;
                 font-family: sans-serif;
                 height: 100%;
