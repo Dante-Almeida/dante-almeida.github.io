@@ -136,8 +136,8 @@
             margin: auto;
             display: flex;
             flex-direction: row;
-            justify-content: stretch;
-            align-content: center;
+            justify-content: center;
+            align-content: stretch;
             }
 
 
