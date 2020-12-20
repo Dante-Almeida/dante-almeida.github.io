@@ -125,8 +125,9 @@
 
 
     #startButton{
-            font-size: 200%;
-            width: 18%;
+            font-size: 150%;
+            width: 20%;
+            height: 60px;
             }
 
 
@@ -167,9 +168,9 @@
 
 
     #instructions{
-                font-size: 200%;
+                font-size: 150%;
                 height: 100%;
-                width: 15%;
+                width: 19%;
                 }
 
 
