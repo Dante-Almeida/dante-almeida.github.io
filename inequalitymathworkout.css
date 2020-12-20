@@ -160,6 +160,8 @@
     #buttons{
         display: inline;
         width: 30%;
+        display: flex;
+        flex-direction: row;
         }
 
 
