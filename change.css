@@ -20,6 +20,12 @@
                                           height: 65px;
                                           border-radius: 10px;
                                         }
+  
+                                #register{
+                                          text-align: center; 
+                                          margin: auto; 
+                                          font-size: 40px;
+                                          }
 
                                 #monologue{
                                             font-size: 1px;
