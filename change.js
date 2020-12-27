@@ -134,9 +134,8 @@ function startGame() {
   firstGame = false;
  }
 
- document.getElementById(
-  "returnButton").disabled = false;
- document.getElementById("monologue").style.fontSize = "15px";
+ document.getElementById("returnButton").disabled = false;
+ document.getElementById("monologue").style.fontSize = "20px";
  document.getElementById("monologue").style.color = "black";
  lives = 3;
  points = 0;
