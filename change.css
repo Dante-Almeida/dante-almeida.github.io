@@ -3,6 +3,11 @@
                                             font-size: 35px;
                                              }
   
+                                #input[type=radio]{
+                                                    width:2em;
+                                                    height:2em;
+                                                    }
+  
                                 body {
                                       text-align: center;
                                       margin: auto;
