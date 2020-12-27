@@ -1,31 +1,35 @@
 @media (orientation: portrait){
-                              }
+                                p{
+                                  font-size: 30px;
+                                  }
+  
+                                body {
+                                      text-align: center;
+                                      margin: auto;
+                                      }
 
-body {
-     text-align: center;
-     margin: auto;
-    }
+                                button{
+                                        font-size: 20px;
+                                        margin: auto;
+                                       }
 
-button{
-      font-size: 20px;
-      margin: auto;
-      }
+                                .add,.sub{
+                                          font-size: 50px;
+                                          font-weight: bold;
+                                          width: 55px;
+                                          height: 55px;
+                                          border-radius: 10px;
+                                        }
 
-.add,.sub{
-         font-size: 50px;
-         font-weight: bold;
-         width: 55px;
-         height: 55px;
-         border-radius: 10px;
-         }
-
-#monologue{
-          font-size: 1px;
-          color: lightgray;
-         }
+                                #monologue{
+                                            font-size: 1px;
+                                            color: lightgray;
+                                           }
 
 
-#signature{    
-          font-size: 10px;
-          text-align: center;
-         }
+                                #signature{    
+                                            font-size: 10px;
+                                            text-align: center;
+                                          }
+
+                                }
