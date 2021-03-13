@@ -221,33 +221,33 @@ h2{
   /*ilusion*/
 
 .principal{
-            height: 250px;
-            width: 150px;
+            height: 500px;
+            width: 300px;
             margin: auto;
             display: inline-block;
         }
 
 .secundario{
-            height: 100px;
-            width: 75px;
+            height: 200px;
+            width: 150px;
             margin: auto;
             position: relative;
-            top: 50px;
+            top: 100px;
             }
 
 .parteIluminada{
                 position: relative;
-                top: 25px;
-                height: 100px;
+                top: 50px;
+                height: 200px;
                 margin: auto;
-                width: 100px;
+                width: 200px;
                 background-color: #8f7c6d;
                 border-radius: 10px;
                 }
 
 .parteIluminadaSecundaria{
-                        height: 50px;
-                        width: 75px;
+                        height: 100px;
+                        width: 150px;
                         margin: auto;
                         position: relative;
                         top: 0px;
