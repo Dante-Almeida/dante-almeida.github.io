@@ -1,0 +1,522 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Colorimetry for Web-devs</title>
+        <link rel="stylesheet" href="colorimetry.css">
+    </head>
+    
+    <body>
+        <h1 id="title"> Color Models</h1>
+            <p style="text-align: center; font-family: Trattatello, fantasy;">Colorimetry for Web-devs</p>
+            <p class="text">Many students of front-end web-development fall into the stereotype - on which I include myself - of technical-oriented guys who have little trouble  (and some times even have fun) debugging a JavaScript code, but struggle with the aesthetical side of the trade.  And color is probably one aspect of aesthetics which I struggled the most. Before studying web-development, I 
+            couldn't care less about the difference between  <span style="background-color: orchid">orchid</span> and <span style="background-color: violet">violet</span>, or <span style="background-color: purple; color: white;">purple</span> and <span style="background-color: indigo; color: white;">indigo</span>. Now I have to pick among 16 millions colors! Nonetheless, since I didn't want to limit myself on only creating boring sites with white background and black text, I just got over it and studied colors in a technical fashion that made sense for me. </p>
+            
+            <p class="text">The technical study of colors is called <em>colorimetry</em>, which consists in a 
+            multidisciplinary field dealing with physics of light (<em>spectrometry</em>), chemistry of dyes and pigments,
+            anatomy of the human's visual system etc.</p>
+            
+            <p class="text">&Tab; In this article we are going to present and discuss the most important color models; focusing, when appliable, on their CSS implementation. </p>
+
+        <h2> What is color</h2>
+
+            <p class="text"> Color is how our visual system interprets lights of different wave-lenghts. The white light is composed by lights of all wave-lenghts of the visible spectrum and can be broken into its components when, for instance, it pass through a translucent prism or droplets of water (causing the phenom of rainbows).</p>
+
+            <br><br>
+
+            <div id="colorSpectrum" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, red, orange, yellow, rgb(0,255,0), cyan, rgb(0, 0, 255), violet)"> </div>
+
+            <p class="imageCaption">Colors of the visual spectrum, ordered from high to low wave-lenghts</p>
+
+            <p class="text"><b style="color: red">Red</b>  has a wave-lenght of ~700–635nm; <b style="color: darkorange">orange</b> , ~635–590nm; <b style="color: gold">yellow</b>, ~590–560nm; <b style="color: green">green</b>, ~560–520nm; <b style="color: cyan">cyan</b>, ~520–490nm; <b style="color: blue">blue</b>, ~490–450nm and <b style="color: violet">violet</b>,  ~450–400nm.</p>  
+
+            <p class="text">Observe that not all colors correspond to a wave-lenght of light. Those are called <em>non-spectral colors</em>.</p>
+            <ul>
+                <li class="text"><b>Black</b> correspond to no light. Black objects absorb most light cast on them and reflect almost nothing          into our eyes. That is why you feel the heat when you wear black clothes during a sunny day.</li>
+                <li class="text"> <b style="color: dimGrey">Grey</b> is how our visual system interprets dim white-light or 
+                    an object with many small, close, black and white spots. That is why heavy clouds are grey: they filter a lot, but not all, of the white light from the Sun. Our hair becomes grey before becoming white because keratin (the protein hair is made of) is white and the production of the pigments that give a young penson's hair-color - eumelanin and phaeomelanin - by the hair follicle declines as a person grows older. </li>
+                <li class="text"><b style="color: hotpink">Pink</b> is a mix of red and white. Flamingos are born with white plumage and get pink as they consume a diet rich in carotenoids.</li>
+                <li class="text"> <b style="color: maroon">Brown</b> is a mix of red or orange and black. In a typical brown soil, most of the black color comes from carbon (the element coal is made of) while the red comes from oxidated iron (as in blood or rust).</li>
+                <li class="text"><b style="color: magenta">Magenta</b>, <b style="color: purple">purple</b> and similar colors are how our visual system interprets the superposition of lights on both ends of the spectrum (red and blue/violet).</li>
+            </ul>
+
+            <h3>Nomenclature</h3>
+                <ul>
+                    <li class="text">The <b>hue</b> of a color is its main property and it is somewhat related with position in the spectrum. This is the property you specify when you describe a color as "pure red", "yellowish-green" or "greenish-cyan"; despite of its lightness or darkness. The hue of non-spectral colors depends on some factors:
+                        <ul>
+                            <li>White, grey and black are called <em>achromatic</em> and they have no hue.</li>
+                            <li>A color resulting from from the mix of two spectral colors, even if itself is not spectral, is considered having a hue.</li>
+                            <li>A mix of a spectral color with a achromatic color is either a tint, tone or shade of the same hue as the original spectral color.</li>
+      
+                        </ul>
+                    </li>
+                    <li class="text"> A <b>tint</b> of a hue is mix of this hue with white. As the predominance of white increases, the <em>lightness</em> of the tint increases. Pink is a tint of red.
+      
+                        <div style="width: 400px; margin: auto;">      
+                                <div id="redTints" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, red, hsl(0, 100%, 75%) , hsl(0, 100%, 95%))"> </div><br>
+
+                                <div id="greenTints" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, hsl(120, 100%, 50%), hsl(120, 100%, 75%) , hsl(120, 100%, 95%))"> </div><br>
+
+
+                                <div id="blueTints" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, hsl(240, 100%, 50%), hsl(240, 100%, 75%) , hsl(240, 100%, 95%))"> </div>
+
+                                <p class="imageCaption">Gradient of tints of red, green and blue.</p>
+
+                        </div>
+
+                    <li class="text"> A <b>tone</b> of a hue is a mix of this hue with grey.</li>
+
+                        <div style="width: 400px; margin: auto;">      
+                            <div id="redTones" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, red, hsl(0, 50%, 50%) , hsl(0, 10%, 50%))"> </div><br>
+
+                            <div id="greenTones" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, hsl(120, 100%, 50%), hsl(120, 50%, 50%) , hsl(120, 10%, 50%))"> </div><br>
+
+
+                            <div id="blueTones" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, hsl(240, 100%, 50%), hsl(240, 50%, 50%) , hsl(240, 10%, 50%))"> </div>
+                            <p class="imageCaption">Gradient of tones of red, green and blue.</p>
+
+                        </div>
+
+                    <li class="text"> A <b>shade</b> of a hue is mix of this hue with black. As the predominance of black increases, the <em>darkness</em> of the shade increases. Brown is a tint of red or orange.
+      
+                        <div style="width: 400px; margin: auto;">      
+                            <div id="redShades" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, red, hsl(0, 100%, 25%) , hsl(0, 100%, 10%))"> </div><br>
+
+                            <div id="greenShades" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, hsl(120, 100%, 50%), hsl(120, 100%, 25%) , hsl(120, 100%, 10%))"> </div><br>
+
+
+                            <div id="blueShades" style="margin: auto; height:20px; width: 80%; background: linear-gradient(to right, hsl(240, 100%, 50%), hsl(240, 100%, 25%) , hsl(240, 100%, 10%))"> </div>
+
+
+                            <p class="imageCaption">Gradient of shades of red, green and blue.</p>
+
+                        </div>
+
+                    <li class="text"><b>Saturation</b> is the richness, colorfulness or intensity of a color. The exact relation of saturation with the previously discussed concepts vary from model to model. Some models consider any tint, tone or shade as less saturated than a pure hue; while others consider only tones as less saturated (shades and tints being a matter of darkness and lightness in this case). There are also models which consider certain hues less saturated than others. We will discuss each model peculiarity as their are introduced.</li>
+
+                    <div style="text-align: center;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flickr_-_lo.tangelini_-_Tonos_%281%29.jpg/800px-Flickr_-_lo.tangelini_-_Tonos_%281%29.jpg" width="100px" style="filter: saturate(35%)">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flickr_-_lo.tangelini_-_Tonos_%281%29.jpg/800px-Flickr_-_lo.tangelini_-_Tonos_%281%29.jpg" width="100px" style="filter: saturate(100%)">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flickr_-_lo.tangelini_-_Tonos_%281%29.jpg/800px-Flickr_-_lo.tangelini_-_Tonos_%281%29.jpg" width="100px" style="filter: saturate(500%)">
+
+                        <p style="font-size: 10px; font-style: italic; text-align: center;">From left to right, the same image with 35% saturation filter, no filter and 500% of saturation filter.</p>
+                        <p><a href="https://commons.wikimedia.org/wiki/File:Flickr_-_lo.tangelini_-_Tonos_(1).jpg" style="font-size: 10px; text-align: center;">Image Source</a></p>
+
+                    </div>
+
+                    <li class="text"><b>Primary colors</b> of a model is a set of colors (usually three) used to obtain other hues. Usually, achromatic colors, even if present on an artist pallete, are not considered primary, since they can only be used to obtain other tints, tones and shades. Colors which result from a mix of just two primary colors are called <b> secondary colors</b>. </li>
+
+                    <li class="text"><b>Complementary colors</b> of a model are pairs of chromatic colors which do not produce a hue when mixed. In addictive models usually such mixes will result in lightness, while in subtractive models, in darkness. Complementary pairs constitute on a primary and secondary colors such that the primary is not used to produce the secondary. When positioned side-by-side, complementary colors produce a high-contrast effect.</li>
+
+                    <table style="width: 90%">
+                        <tr><td style="width: 40%; height: 20px; background: linear-gradient(to right, blue, yellow);"></td><td>&ThickSpace;</td><td style="width: 40%; height: 20px; background: linear-gradient(to right, blue, red);"></td></tr>
+                        <tr><td style="width: 40%; height: 20px; background: linear-gradient(to right, green, magenta);"></td><td>&ThickSpace;</td><td style="width: 40%; height: 20px; background: linear-gradient(to right, green, cyan);"></td></tr>
+                        <tr><td style="width: 40%; height: 20px; background: linear-gradient(to right, red, cyan);"></td><td>&ThickSpace;</td><td style="width: 40%; height: 20px; background: linear-gradient(to right, red, green);"></td></tr>
+                    <table>
+
+                </ul>
+
+
+
+            <p class="imageCaption">On the left we see gradients of complementary colors of the RGB model. Although in such model the mix of complementary colors usually produce lightness,
+            because in a gradient each color is desaturated as they aproach, the result in this case is a dull visual in the middle. By comparison, on the right we can see that a gradient of non-complementary colors produce a continuum  of hues.</p>
+
+            <div style="text-align: center;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/SelbstPortrait_VG2.jpg/483px-SelbstPortrait_VG2.jpg" width="120px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vincent_Willem_van_Gogh_076.jpg/760px-Vincent_Willem_van_Gogh_076.jpg" width="180px">
+            </div>
+
+            <p class="imageCaption">Van Gogh produced high-contrast in his paintings using complementary colors of the RYB model adjacently.</p>
+
+        <h3>Human Vision of Colors</h3>
+
+            <p class="text">
+                        The human retina has mainly two kinds of photoreceptor cells: <strong>rods</strong> and <strong>cones</strong>. Rods are highly sensitive to light, being responsible for our capacity of seeing under very low light-conditions, but they play little role on our capacity of color vision. Nocturnal animals which rely on vision - like felines - have a higher concentration  of rods in their eyes. 
+            </p>
+            <p class="text">Cone cells, by their turn, are more or less sensible to certain wave-lenghts. They come in three kinds (trichromacy):</p>
+            <ul>
+                <li>The <strong>L</strong> cones are more responsive to long wave-lenghts, peaking their responsiveness at ~564–580nm.</li>
+                <li>The <strong>M</strong> cones are more responsive to medium wave-lenghts, peaking their responsiveness at ~534–545nm.</li>
+                <li>The <strong>S</strong> cones are more responsive to short wave-lenghts, peaking their responsiveness at ~420–440nm.</li>
+            </ul>
+                        
+            <p class="text">The cones communicate the intensity of the stimulus they receive to the brain, which produces the subjective experience of color. </p>
+
+            <p class="text">Deficiency of the cone cells leads to color-blindness conditions (monochromacy or dichromacy). There are people with a fourth kind of cone cell (tetrachromacy) who are more perceptive of slighter variations of hue.</p>
+
+            <p class="text">
+                An important aspect of human color-vision is that the brain may interpret the same color diffirently depending on its contrast with other colors in the visual field. For instance, observe the two squares with rounded corners in the image  bellow:
+            </p>
+
+            <div style="margin: auto; text-align: center;">
+                <div id="azulEscuro" class="principal">
+                    <div id="azulClaro" class="secundario"></div>
+                    <div class="parteIluminada">
+                        <div class="parteIluminadaSecundaria"></div>
+                    </div>      
+                </div>   
+                <div id="amarelo" class="principal">
+                    <div id="branco" class="secundario"></div>
+                    <div class="parteIluminada">
+                        <div class="parteIluminadaSecundaria"></div>
+                    </div>      
+                </div>   
+            </div>
+
+            <p class="text">
+                They may appear quite different to you, but they have in fact the same colors (#938cbb for the smaller area and #8f7c6d for the larger). It is the contrast with the rectangular shapes that makes you see the colors differently. To make matters even more complicated, this phenomenon varies from person to person. Remember the debate concerning the color of the dress in 2015? 
+            </p>
+
+            <p class="text">Now that we have the core concepts defined, let's finally take a look on some color models.</p>
+
+            <h2 id="rgbTitle"> The Addictive <span style="color: red">R</span><span style="color: green">G</span><span style="color: blue">B</span> Model</h2>
+
+                <p class="text">Accordingly with what we discussed above, when an object reflects or casts light with ~580nm of wave-lenght into your eyes, your L and M cones in a region of your retina will react and your brain will interpret the stymulus as yellow color. Now, what happen when you look at an object with several tiny, close-together spots casting red and green light? Again,  your L and M cones in a region of your retina will react and, since the stymulus is the same as in the former exemple, your  brain will interpret it as yellow color.   </p> 
+
+                <p class="text">That is how electronic displays - like CRT, LCD, plasma, OLED and quantum dots - work. They contain small dots 
+                casting either red, blue or green light. Each set of the dots of the same color is called <em>channel</em>. 
+                </p>
+
+                <div style="margin: auto; text-align: center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Pixel_geometry_01_Pengo.jpg/800px-Pixel_geometry_01_Pengo.jpg" width="250px">
+                    <p class="imageCaption">Color channels geometry on several electronic displays.</p>
+                    <p class="imageCaption" style="font-style: italic"> <a href="https://commons.wikimedia.org/wiki/File:Pixel_geometry_01_Pengo.jpg">Image Source</a></p>
+                </div>
+
+                <p class="text">Since we have three colors producing a gamut, we have a color system: RGB. Let us discuss its properties.</p>
+
+                <p class="text">As stated earlier, the primary colors of RGB are red, green and blue. The recipes for secondary colors are:</p>
+                
+                <ul>
+                    <li>cyan = green + blue</li>
+                    <li>yellow = red + green</li>
+                    <li>magenta = red + blue</li>
+                </ul>
+
+                <p class="text">RGB's complementary pairs are:</p>
+                <ul>
+                    <li>cyan and red</li>
+                    <li>yellow and blue</li>
+                    <li>magenta and green</li>
+                </ul>
+
+                <p class="text">No colors result in black, while all colors at full saturation produce white.</p>
+
+                <div id="blackScreen">
+                    <div id="circleRed" class="rgbCircles"></div>
+                    <div id="circleGreen" class="rgbCircles"></div>
+                    <div id="circleBlue" class="rgbCircles"></div>
+                </div>
+                
+                <p class="imageCaption">RGB scheme at full saturation.</p>
+
+                <br>
+
+                <p class="text">Saturation in the RGB model is understood as the intensity of the light output of a display. 
+                Consequently, higly saturated colors are brighter than lower ones; and secondary colors are brighter than primary colors. 
+                Most  modern displays have 255 levels of saturation for each channel, resulting in more than 16 million colors. Since it is 
+                estimated that humans with normal vision can distinguish ~10 million colors, do not expect for displays with richer gamutes
+                to be developed.
+                </p>
+
+                <p class="text">Hues other than the previously discussed can be obtained adjusting the saturation of primary colors. 
+                For instance, orange is obtainable with a mix of red and green such that the saturation of green is lower than the saturation of red; while a yellowish-green hue can be obtained with the same mix but with the green channel having a higher saturation than the red channel.
+                </p>
+
+                <p class="text">Shades are obtained reducing the saturation of the channels; while tints, increasing the saturation of the complementary color. By their turn,  tones are gotten by reducing the saturation of the predominant colors and increasing the complementary color. Shades of gray occour when all channels have the same value, as long the the value is higher than 0 and lower than 255.
+                </p>
+
+                <p class="text">You can experiment by yourself how colors combine in the RGB model on the interactive elements bellow:</p>
+
+                <div id="rgbColorVisualizer"></div>
+
+
+
+                <div style="text-align: center">
+                    <p id="rgbOutputCode" class="codeOutput"> rgb(0, 0, 0) </p>
+                    <p id="hexOutputCode" class="codeOutput"> #000000 </p>
+                    <p><span style="color: red">R</span><input id="redInput" class="rgbInput" type="range" min="0" max="255" value="0" oninput="setRed()"><span id="outputRedValue" class="outputValue">0</span></p>
+                    <p><span style="color: green">G</span><input id="greenInput" class="rgbInput" type="range" min="0" max="255" value="0" oninput="setGreen()"><span id="outputGreenValue" class="outputValue">0</span></p>
+                    <p><span style="color: blue">B</span><input id="blueInput" class="rgbInput" type="range" min="0" max="255" value="0" oninput="setBlue()"><span id="outputBlueValue" class="outputValue">0</span></p>
+
+                </div>
+
+                <br>
+
+                <p class="text">In CSS, a color value can be set as RGB coordinates in both decimal and hexadecimal numeration.
+                    For decimal, the sintax is <span style="font-family: monospace;">rgb(R, G, B)</span>, where <span style="font-family: monospace;">R</span>, <span style="font-family: monospace;">G</span> and <span style="font-family: monospace;">B</span> stand for any value ranging from 0 to 255; which correspond to the saturation of the red, green and blue channels, respectively. 
+                    For hexadecimal, the sintax is <span style="font-family: monospace;">#rrggbb</span>, where <span style="font-family: monospace;">rr</span>, <span style="font-family: monospace;">gg</span> and <span style="font-family: monospace;">bb</span> stand for any value ranging from 00 to ff; which correspond to the saturation of the red, green and blue channels, respectively. 
+                </p>
+
+                <p class="text" style="background-color: #66ff66; color: #660000;">So, let's say you want a paragraph with a tint of green in the background and a shade of red for the text, like this one. There are two ways to code this as RGB cordinates in CSS.
+                </p>
+
+                <div id="rgbCode">
+                    #myParagraph{<br>
+                                <span style="position: relative; left: 105px;">background-color: rgb(102,255,102);</span><br>
+                                <span style="position: relative; left: 105px;">color: rgb(102,0,0);</span><br>
+                                <span style="position: relative; left: 101px;">}</span>  
+                </div>
+                <br><br>
+
+                <div id="hexCode">
+                    #myParagraph{<br>
+                                <span style="position: relative; left: 105px;">background-color: #66ff66;</span><br>
+                                <span style="position: relative; left: 105px;">color: #660000;</span><br>
+                                <span style="position: relative; left: 101px;">}</span>  
+                </div>
+                <br>
+
+                <p class="text">Actually, there are four ways, since nothing prevents you from using decimal for the background and hexadecimal 
+                for the text or vice-versa.
+                </p>
+
+            <h2 id="cmyTitle"> The Subtractive <span style="color: cyan">C</span><span style="color: magenta">M</span><span style="color: yellow">Y</span> Model</h2>
+
+                        <p class="text">Anyone who has ever played with paints remember the joy of mixing certain colors and getting new ones: mix yellow with blue and get a green paint fitting for coloring the vegetation; now mix  what is left of yellow with some red in order to get an orange hue to paint the Sun setting in the horizon... "<i>But wait a minute!</i>", you interject,
+                        "<i>This doesn't match the previously discussed RGB model!</i>". And to this I answer: off course not! The RGB model is about adding wave-lenghts of light. Now we are talking about mixing paints, which is a whole different animal.
+                        </p>
+
+                        <p class="text">For any material object which doesn't produce its own light, whatever color it has is determined by which wave-lenghts of light it reflects or absorbs. Reflect all wave-lenghts and the object is white; instead, if it absorbs all, it is black.  An object that absorbs most of the blue wave-lenght while it reflects most of the red and green wave-lenghts will have a yellow hue, just a described by the RGB model.
+                        </p>
+
+                        <p class="text">
+                            When paints are mixed, the resulting paint absorbs all the wave-lenghts its "parents" did. For instance, mix cyan (absorbs red, reflects green and blue) with yellow (absorbs blue, reflects green and red) and the resulting paint will reflect mostly green while absorbing most of the red and blue. Mix a lot of paints and you get a very dark brown, which can become light brown if you add some white paint. Since the addition of paint usually makes a mix absorb more wave-lenghts it did before, models used to describe such situations are called <em>subtractive models</em>.
+                        </p>
+
+                        <p class="text">Now be warned: since paints are a mix of chemical substances, things get a lot messier than when we just deal with light. Some paints are made of <em>pigments</em>, which aren't soluble in the liquid, while others are <em>dyes</em> which chemically bond to the substrate they are applied. Different paints may require different concentrations of pigment  to be made, affecting their opacity and the proportion of each paint in a mix required to obtain a hue. And if the pigments or dyes happen to chemically react, you can just throw the model through the window. 
+                        </p>
+
+                        <p class="text">For the sake of simplicity, let us assume our palete has ideal paints: they don't react, they have equal concentrations; they are translucent enough to, when a small amount is applied on a white canvas/sheet, the result is a light color, but we still can obtain higher opacity applying a higher amount of paint.  With a white canvas and a palete of cyan, magenta and yellow of such ideal paints, we get the CMY model, which is the exact inverse of the RGB model: no paint at all gives us white, cyan and magenta give us blue, cyan and yellow give us green, magenta and yellow give us red and all together give us black.
+                        </p>
+
+
+                        <div id="whiteCanvas">
+                            <div id="circleCyan" class="cmyCircles"></div>
+                            <div id="circleMagenta" class="cmyCircles"></div>
+                            <div id="circleYellow" class="cmyCircles"></div>
+                        </div>
+                        
+                        <p style="font-size: 10px; font-style: italic; text-align: center;">The CMY color scheme at high saturation </p>
+                        
+                        <p class="text"> Other hues can be obtained using different proportions of each paint. For instance, orange can be obtained by yellow and magenta using a slightly higher concentrantion of yellow. Lighter tints are obtainable reducing all paints proportionally, making the mix more translucent. Darker shades can be obtained adding the complementary color. For instance, darker shades of yellow are obtainable adding equal amounts of cyan and magenta, while darker shades of green are obtainable adding small amounts of magenta to your cyan+yellow mix. You can try your own paint combinations in the interactive canvas bellow:  </p>
+
+                        <br>
+
+                        <div id="cmyColorVisualizer"></div>
+
+                        <div style="text-align: center">
+
+                            <p><span style="color: cyan; font-weight: bold;">C</span><input id="cyanInput" class="cmyInput" type="range" min="0" max="255" value="0" oninput="setCyan()"><span id="outputCyanValue"></span></p>
+                            <p><span style="color: magenta; font-weight: bold;">M</span><input id="magentaInput" class="cmyInput" type="range" min="0" max="255" value="0" oninput="setMagenta()"><span id="outputMagentaValue"></span></p>
+                            <p><span style="color: gold; font-weight: bold;">Y</span><input id="yellowInput" class="cmyInput" type="range" min="0" max="255" value="0" oninput="setYellow()"><span id="outputYellowValue"></span></p>
+
+                        </div>
+
+                        <h3>Other subtractive models</h3>
+
+                            <p class="text">
+                                As we said before, dealing with paints is messier than dealing with light. Aside from all the physical issues mentioned above, there are other issues concerning the choice of a palete,  namely, budgetary limitations, availability of certain pigments or dyes, cultural significance of certain colors, artistic tradition, artistic expression etc. In face of all these concerns, it is  natural that more subtractive models would be developed. We will discuss two of them: the <strong><span style="color: cyan">C</span><span style="color: magenta">M</span><span style="color: yellow">Y</span><span style="color: black">K</span></strong> and the <strong><span style="color: red">R</span><span style="color: yellow">Y</span><span style="color: blue">B</span></strong>.
+
+                            </p>
+
+                            <p class="text"> The CMYK model consists on the CMY model with the addition of <b>blacK</b> paint. It is the model used on printers and by the printing industry. After all, the most
+                            used color in printing is by far black; thus, it makes more sense to use actual black ink rather than wasting expensive colored ink. Also, it is far easier to get darker shades of a hue 
+                            mixing it with black ink rather than figuring out the exact amount of cyan, magenta or yellow required to get the same result. Just try it yourself: </p>
+
+                            <div id="cmykColorVisualizer"> </div>
+                            <p id="cmkyOutputCode" class="codeOutput"> cmky(0%, 0%, 0%, 0%) </p>
+                            <div style="text-align: center">
+                            <p><span style="color: cyan; font-weight: bold;">C</span><input id="cyanInputCMYK" class="cmykInput" type="range" min="0" max="100" value="0" oninput="setCyanCMYK()"><span id="outputCyanValueCMYK" class="outputValue">0%</span></p>
+                            <p><span style="color: magenta; font-weight: bold;">M</span><input id="magentaInputCMYK" class="cmykInput" type="range" min="0" max="100" value="0" oninput="setMagentaCMYK()"><span id="outputMagentaValueCMYK" class="outputValue">0%</span></p>
+                            <p><span style="color: gold; font-weight: bold;">Y</span><input id="yellowInputCMYK" class="cmykInput" type="range" min="0" max="100" value="0" oninput="setYellowCMYK()"><span id="outputYellowValueCMYK" class="outputValue">0%</span></p>
+                            <p><span style="color: black; font-weight: bold;">K</span><input id="blackInputCMYK" class="cmykInput" type="range" min="0" max="100" value="0" oninput="setBlackCMYK()"><span id="outputBlackValueCMYK" class="outputValue">0%</span></p>
+                            </div>
+
+                            <p class="text"> CMYK is not supported in HTML5 or CSS3, but the <em>World Wide Web Consortium</em> is considering 
+                                its adoption as standard in the upcoming CSS4, which may be released any time before the heat-death of the Universe. Meanwhile, the W3School disponibilizes a JavaScript library which allows setting CMYK as a HTML attribute. 
+                                This library can be downloaded at <a href="https://www.w3schools.com/lib/w3color.js" >https://www.w3schools.com/lib/w3color.js</a>
+                            </p>
+
+                            <p class="text">Then, in order to set the background color of an element to, let us say, cyan, use the following snipet as a attibute in the opening tag of the element:</p>
+
+                            <p class="codeOutput" style="background-color:lightGray;  margin: auto;">
+                                data-w3-color="cmyk(100%, 0%, 0%, 0%)"
+                            </p>
+
+                            <br>
+
+                            <p class="text">A last subtractive model worth to be mentioned is the RYB (red, yellow, blue).
+                                This model was first described in the 17th century by the  Belgian Jesuit mathematician, physicist and architect François d'Aguilon; and since then it has been a guiding model for western painters. 
+                            </p>
+
+
+                            <p class="text">As stated earlier, the primary colors of RYB are red, yellow and blue. The recipes for secondary colors are:</p>
+                            
+                            <ul>
+                                <li>purple = red + blue</li>
+                                <li>green = yellow + blue</li>
+                                <li>orange = red + yellow</li>
+                            </ul>
+
+                            <p class="text">RYB's complementary pairs are:</p>
+                            
+                            <ul>
+                                <li>red and green</li>
+                                <li>blue and orange</li>
+                                <li>yellow and purple</li>
+                            </ul>
+
+                            <p class="text">All colors mixed will result in a dark brown.</p>
+
+                            <div id="secondWhiteCanvas">
+                                <div id="circleBlue2" class="rybCircles"></div>
+                                <div id="circleRed2" class="rybCircles"></div>
+                                <div id="circleYellow2" class="rybCircles"></div>
+                            </div>
+
+                            <p class="imageCaption">RYB scheme</p>
+
+                            <p class="text">Alongside the primary colors, painters may include on their pallets black and white paints, in order to produce tones, taints and shadows. They may also use two or more variants of a primary color,which facilitates the reaching of the desired  color. Actually, painters will include on their pallets whatever paints they feel like, as long their budgets allow it. The point of the the  RYB model is not impose restrictions, but to serve as a guide to paint mixing.  </p>
+
+
+            <h2>The HSL model</h2>
+
+                        <p class="text"> Let's perform a little thought-experiment. Imagine a well lit, homogeneously painted, 
+                        avocado-colored wall. Now imagine a ball is thrown parallelly to it, casting a circular shadow. Actually, you 
+                        don't even have to imagine it. Just take a look at the image bellow:
+                        </p>
+
+                        <div id="wall">
+                            <div id="ballShadow"> </div>
+                        </div>
+
+                        <p class="text"> What color would you say the shaded region has? It is just a darker shade of the color of 
+                        the wall, right? But how would you code it using the RGB model? Well, for the whole wall the decimal and the hexadecimal
+                        RGB codes are, respectively, <span style="font-family: monospace; ">rgb(85, 129, 3)</span> and <span style="font-family: monospace">#558103</span>,  while, for the shaded area, the codes are <span style="font-family: monospace">rgb(49, 75, 2)</span> and <span style="font-family: monospace">#314B02</span>. Thus, in order to get a darker shade of the same hue, one has to precisely change the saturation of the red, green and blue channels.
+                        </p>
+
+                        <p class="text">
+                        You may now be thinking: <i>"Why I have to figure out the saturation of each RGB channel in order to get a darker shade of a given hue?  I am using a computer! Doesn't it make more sense to just command it to display the darker shade of the given hue and the computer does by itself the calculations required to get each channel saturation?"</i>
+                        </p>
+
+                        <p class="text">Luckly for you, dear reader, this problem has already been adressed in the 20th century. 
+                        It all begun when a French engineer, Georges Valensi, in the 1930s solved what was at the time a problem: 
+                        how to broadcast colored TV signals in a way such that the then-predominant black-&-white TVs could
+                        receive and  output. His solution was dividing the signal in two: the <strong>luma</strong> (which carries the luminosity *information) and the <strong>chroma</strong> (which carries information about the hues and their saturations). 
+                        Then, in the 1970s, computer scientists, aiming to develop a model such that humans could intuitively input color information and computers could  fastly convert into RGB code,  expanded on Valensi's ideas and came up with the HSL color model.
+                        </p>
+
+                        <div style="text-align: center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Luma_Chroma_both.png" width="70%">
+                                <p class="imageCaption">The luma and chroma of a image separated, and the resulting image.</p>
+                                <a href="https://commons.wikimedia.org/wiki/File:Luma_Chroma_both.png" class="imageCaption">Image source</a>
+                        </div>
+                        <br>
+
+                        <p class="text">"HSL" stands for "<em>hue, saturation and lightness</em>". No primary-vs-seconday colors distinction, no figuring out how much of each primary color are required to obtain the desired color. Just pick a hue, set its saturation and luminosity and voilà! It is done!
+                        </p>
+
+                        <p class="text"> The whole gradient of hues is disposed in a wheel. In order to pick a hue, you need to specify its angle on the wheel.  Red's position is 0º\360º; followed by yellow(60º), green (120º), cyan (180º), blue (240º) and magenta (300º). Evidently, the whole gradient is accessible; for instance, orange-ish hues lie between 0º and 60º,  while purple-ish hues lie between 240º and 300º.</p>
+
+                        <div style="text-align: center;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/RGB_color_circle.png" width="50%">
+                                <p class="imageCaption">The HSL wheel of colors</p>
+                                <a class="imageCaption" href="https://commons.wikimedia.org/wiki/File:RGB_color_circle.png">Image source</a>
+                        </div>
+
+
+                        <p class="text">Saturation in the HSL model is mesured in percentage and determines tone. 
+                        A pure hue has 100% saturation, while a completely gray color has 0% saturation. By its turn
+                        lightness is also mesured in percentage and determines if the color is a tint or shade of the given hue.
+                        Lightness levels above 50% give us tints up to completely white (100%), while levels bellow 50% give us 
+                        shades down to completely black (0%). Leave the lightness at 50% for a pure hue. 
+                        </p>
+
+                        <p class="text">You can see for yourself how changing those values affect the resulting color in the 
+                        interacctive elements bellow:</p>
+
+                        <div id="hslColorVisualizer"></div>
+
+                        <p id="hslOutputCode" class="codeOutput"> hsl(0, 100%, 50%) </p>
+
+                        <div>
+
+                            <table style="text-align: center; margin: auto; width: 80%">
+                                <tr><td style="width: 2%"> Hue</td><td><input id="hueInput" class="hslInput" type="range" min="0" max="360" value="0" oninput="setHue()"><span id="outputHueValue" class="outputValue" style="color: hsl(0, 100%, 50%)">0 deg</span></td></tr>
+                                <tr><td style="width: 2%">Saturation</td><td><input id="saturationInput" class="hslInput" type="range" min="0" max="100" value="100" oninput="setSaturation()"><span id="outputSaturationValue" class="outputValue">100%</span></td></tr>
+                                <tr><td style="width: 2%">Lightness</td><td><input id="lightnessInput" class="hslInput" type="range" min="0" max="100" value="50" oninput="setLightness()"><span id="outputLightnessValue" class="outputValue">50%</span></td></tr>
+                            </table>
+                        </div>
+
+                        <br>
+
+                        <p class="text">The CSS sintax for hsl color encoding is <span style="font-family: monospace;">hsl(H, S%, L%)</span>
+                            where  <span style="font-family: monospace;">H</span> stands for any value ranging from 0 to 360, while <span style="font-family: monospace;">S</span> and <span style="font-family: monospace;">L</span>
+                            stand for any value ranging from 0 to 100.</p>
+
+                        <p class="text">For instance, let us say you want the same avocado-colored wall with a circular shadow we saw above. In this case,  the hsl values for the background-color property of the parent and child div elements are, respectively: <span style="font-family: monospace;">hsl(81, 95%, 26%)</span> and  <span style="font-family: monospace;">hsl(81, 95%, 15%)</span>.
+                        </p>
+
+
+                    <h3>The HSV Model</h3>
+
+                        <p class="text">The last model we are going to discuss is not supported on CSS, but many image editors use it. Also, 
+                        some browsers have a HSV-based interface for the color-type input element. So being, it is important for a web-dev to be acquainted with this model.
+                        </p>
+
+                        <p class="text">HSV (aka HSB) stands for "hue-saturation-value" (or "hue-saturation-brightness"). It was created by 
+                            Alvy Ray Smith - co-founder of Pixar and LucasFilm's Computer Division  - and it consists on a variation of HSL. Their main difference is how saturation is conceptualized on both. While in HSL, as we discussed above, reduction in saturation produce tones; in the HSV model it may produce tints, shades or tones, depending on the value/brightness.  
+                        </p>
+
+                        <ul>
+                            <li> Full saturation and value produce a pure hue</li>
+                            <li> Full saturation and bellow 100% value produce shades down to black (0% value).</li>
+                            <li> Bellow 100% saturation and full value produce tints down to white (0% saturation)</li>
+                            <li> Bellow 100% saturation and value produce tones. Reduce the saturation to 0% in order to get grey.</li>
+                        </ul>
+
+                        <p class="text"></p>
+
+                        <div id="hsvColorVisualizer">  </div>
+
+                        <div>
+                            <table style="text-align: center; margin: auto; width: 80%">
+                                <tr><td style="width: 2%"> Hue</td><td><input id="hsvHueInput" class="hsvInput" type="range" min="0" max="360" value="0" oninput="setHueHSV()"><span id="outputHueValueHSV" class="outputValue" style="color: hsl(0, 100%, 50%)">0 deg</span></td></tr>
+                                <tr><td style="width: 2%">Saturation</td><td><input id="hsvSaturationInput" class="hsvInput" type="range" min="0" max="100" value="100" oninput="setSaturationHSV()"><span id="outputSaturationValueHSV" class="outputValue">100%</span></td></tr>
+                                <tr><td style="width: 2%">Value</td><td><input id="hsvValueInput" class="hsvInput" type="range" min="0" max="100" value="100" oninput="setValueHSV()"><span id="outputBrightnessValueHSV" class="outputValue">100%</span></td></tr>
+                            </table>
+                        </div>  
+
+            <h2>Final Remarks</h2>
+
+                        <p>That is it about color models for now. Colorimetry is a vast field and we just scratched its surface here. 
+                        There are <a href="https://en.wikipedia.org/wiki/Color_model">several other color models</a>, many of them being ninche: developed as a framework for specific techologies or in order to incorporate certain aspects of human vision. But for web-development purposes,  you already know enough on how to pick a color for a web-site. Now you need to study which colors to pick. In order to do so, I recomend the study of the following subjects:
+                        </p>
+
+                        <ul>
+                            <li><a href="https://en.wikipedia.org/wiki/Color_psychology">Color psychology</a></li>
+                                <ul>
+                                    <li><a href="https://en.99designs.com.br/blog/creative-inspiration/psychology-color-web-design/">Color psychology applied to web-design</a></li>
+                                    <li><a href="https://coschedule.com/blog/color-psychology-marketing/">Color psychology applied to marketing</a></li>
+                                </ul>
+                            <li><a href="https://en.99designs.com.br/blog/tips/color-meanings/">Color symbolism</a></li>
+                                <ul>
+                                    <li><a href="https://en.wikipedia.org/wiki/Political_colour">Color symbolism in politics</a></li>
+                                    <li><a href="https://www.livescience.com/33523-color-symbolism-meanings.html">Historical development of color symbolism</a></li>
+                                </ul>
+                            <li><a href="https://www.w3schools.com/colors/colors_schemes.asp">Color schemes</a></li>
+                                <ul>
+                                    <li><a href="https://www.artistsnetwork.com/art-techniques/color-mixing/choose-color-schemes/">Color schemes in art</a></li>
+                                    <li><a href="https://visme.co/blog/website-color-schemes/">Exemples of color schemes on web-sites.</a></li>
+                                </ul>
+                        </ul>
+
+                        <p>Good reading and good studies!</p>
+
+        <div id="signature"><p>Autor: Dante Cardoso Pinto de Almeida</p>
+            <p>License: CC BY-SA</p>
+        </div>
+
+        <script src="colorimetry.js"></script>
+    </body>
+</html>
