@@ -111,8 +111,8 @@ h2{
 
 #blackScreen{
             background-color: black;
-            width: 55%;
-            height: 200px;
+            width: 75%;
+            height: 500px;
             margin: auto;
             border-radius: 10px;
 }
@@ -120,9 +120,9 @@ h2{
 .rgbCircles {
             position: relative;
             margin: auto;
-            height: 120px;
-            width: 120px;
-            border-radius: 60px;
+            height: 3000px;
+            width: 300px;
+            border-radius: 150px;
             mix-blend-mode: screen;
 }
 
