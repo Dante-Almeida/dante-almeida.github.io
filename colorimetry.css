@@ -412,7 +412,7 @@ input[type=range]:focus::-ms-fill-upper {
 #magentaInput::-ms-track, #magentaInputCMYK::-ms-track {
                         background: linear-gradient(to right, #ffffff, #ff00ff);
                         }
-#yellowtaInput::-webkit-slider-runnable-track, #yellowInputCMYK::-webkit-slider-runnable-track{
+#yellowInput::-webkit-slider-runnable-track, #yellowInputCMYK::-webkit-slider-runnable-track{
                                         background: linear-gradient(to right, #ffffff, #ffff00);
                                         }
 #yellowInput::-moz-range-track, #yellowInputCMYK::-moz-range-track {
