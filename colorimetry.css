@@ -397,10 +397,37 @@ input[type=range]:focus::-ms-fill-upper {
 #cyanInput::-webkit-slider-runnable-track, #cyanInputCMYK::-webkit-slider-runnable-track{
                                         background: linear-gradient(to right, #ffffff, #00ffff);
                                         }
-#cyanInput::-moz-range-track, #cyanInputCMYK::-webkit-slider-runnable-track {
+#cyanInput::-moz-range-track, #cyanInputCMYK::-moz-range-track {
                               background: linear-gradient(to right, #ffffff, #00ffff);
                              }
-#cyanInput::-ms-track, #cyanInputCMYK::-webkit-slider-runnable-track {
+#cyanInput::-ms-track, #cyanInputCMYK::-ms-track {
                         background: linear-gradient(to right, #ffffff, #00ffff);
+                        }
+#magentaInput::-webkit-slider-runnable-track, #magentaInputCMYK::-webkit-slider-runnable-track{
+                                        background: linear-gradient(to right, #ffffff, #ff00ff);
+                                        }
+#magentaInput::-moz-range-track, #magentaInputCMYK::-moz-range-track {
+                              background: linear-gradient(to right, #ffffff, #ff00ff);
+                             }
+#magentaInput::-ms-track, #magentaInputCMYK::-ms-track {
+                        background: linear-gradient(to right, #ffffff, #ff00ff);
+                        }
+#yellowtaInput::-webkit-slider-runnable-track, #yellowInputCMYK::-webkit-slider-runnable-track{
+                                        background: linear-gradient(to right, #ffffff, #ffff00);
+                                        }
+#yellowInput::-moz-range-track, #yellowInputCMYK::-moz-range-track {
+                              background: linear-gradient(to right, #ffffff, #ffff00);
+                             }
+#yellowInput::-ms-track, #yellowInputCMYK::-ms-track {
+                        background: linear-gradient(to right, #ffffff, #ffff00);
+                        }
+#blackInputCMYK::-webkit-slider-runnable-track{
+                                        background: linear-gradient(to right, #ffffff, #000000);
+                                        }
+#blackInputCMYK::-moz-range-track {
+                              background: linear-gradient(to right, #ffffff, #000000);
+                             }
+#blackInputCMYK::-ms-track {
+                        background: linear-gradient(to right, #ffffff, #000000);
                         }
 
