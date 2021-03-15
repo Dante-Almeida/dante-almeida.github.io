@@ -359,6 +359,6 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #70191c;
 }
-redIńput:focus::-webkit-slider-runnable-track {
+#redIńput:focus::-webkit-slider-runnable-track {
   background: linear-gradient(to right, #000000, #ff0000);
 }
