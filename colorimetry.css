@@ -362,3 +362,13 @@ input[type=range]:focus::-ms-fill-upper {
 #redIńput:focus::-webkit-slider-runnable-track {
   background: linear-gradient(to right, #000000, #ff0000);
 }
+#redInput::-webkit-slider-runnable-track{
+                                        background: linear-gradient(to right, #000000, #ff0000);
+                                        }
+#redInput::-moz-range-track {
+                              background: linear-gradient(to right, #000000, #ff0000);
+                             }
+#redInput::-ms-track {
+                        background: linear-gradient(to right, #000000, #ff0000);
+                        }
+
