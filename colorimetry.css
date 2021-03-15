@@ -147,7 +147,7 @@ h2{
   #whiteCanvas{
                 background-color: white;
                 width: 55%;
-                height: 200px;
+                height: 500px;
                 margin: auto;
                 border-radius: 10px;
                 border: solid 3px black;
@@ -157,28 +157,28 @@ h2{
 .cmyCircles {
             position: relative;
             margin: auto;
-            height: 120px;
-            width: 120px;
-            border-radius: 60px;
+            height: 300px;
+            width: 300px;
+            border-radius: 150px;
             mix-blend-mode: multiply;
             }
 
 #circleCyan{
             background-color: cyan;
-            top: 10px;
+            top: 30px;
             z-index: 1
             }
 
   #circleYellow{
                 background-color: rgb(255, 255, 0);
-                bottom: 180px;
-                left: 30px;
+                bottom: 440px;
+                left: 75px;
                 }
 
  #circleMagenta{
                 background-color: magenta;
-                bottom: 60px;
-                right: 30px;
+                bottom: 140px;
+                right: 75px;
                 }
 
 #secondWhiteCanvas{
