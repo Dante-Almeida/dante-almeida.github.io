@@ -59,7 +59,7 @@ h2{
 
 #cmyColorVisualizer, #cmykColorVisualizer{
                                             width: 70%;
-                                            height: 150px;
+                                            height: 350px;
                                             margin: auto;
                                             border-radius: 20px ;
                                             border: solid black 2px;
@@ -76,7 +76,7 @@ h2{
 
 #hslColorVisualizer, #hsvColorVisualizer{
                                         width: 70%;
-                                        height: 150px;
+                                        height: 350px;
                                         margin: auto;
                                         border-radius: 20px;
                                         border: solid black 2px;
@@ -183,7 +183,7 @@ h2{
 
 #secondWhiteCanvas{
                     width: 55%;
-                    height: 200px;
+                    height: 500px;
                     margin: auto;
                     border-radius: 10px;
                     border: solid 3px black;
@@ -193,28 +193,28 @@ h2{
 .rybCircles {
             position: relative;
             margin: auto;
-            height: 120px;
-            width: 120px;
-            border-radius: 60px;
+            height: 300px;
+            width: 300px;
+            border-radius: 150px;
             mix-blend-mode: luminosity;
             }
 
 #circleBlue2{
             background-color: rgba(0, 0, 200, 70%);
-            top: 10px;
+            top: 30px;
             z-index: 1
             }
 
   #circleYellow2{
                 background-color: rgba(190, 190, 0, 90%);
-                bottom: 180px;
-                left: 30px;
+                bottom: 440px;
+                left: 75px;
                 }
 
  #circleRed2{
             background-color: rgba(200, 0, 0, 80%);
-            bottom: 60px;
-            right: 30px;
+            bottom: 140px;
+            right: 75px;
             }
 
 
@@ -362,6 +362,9 @@ input[type=range]:focus::-ms-fill-upper {
 #redIńput:focus::-webkit-slider-runnable-track {
   background: linear-gradient(to right, #000000, #ff0000);
 }
+
+/*Individual sliders*/
+
 #redInput::-webkit-slider-runnable-track{
                                         background: linear-gradient(to right, #000000, #ff0000);
                                         }
@@ -370,5 +373,34 @@ input[type=range]:focus::-ms-fill-upper {
                              }
 #redInput::-ms-track {
                         background: linear-gradient(to right, #000000, #ff0000);
+                        }
+
+#blueInput::-webkit-slider-runnable-track{
+                                        background: linear-gradient(to right, #000000, #0000ff);
+                                        }
+#blueInput::-moz-range-track {
+                              background: linear-gradient(to right, #000000, #0000ff);
+                             }
+#blueInput::-ms-track {
+                        background: linear-gradient(to right, #000000, #0000ff);
+                        }
+
+#greenInput::-webkit-slider-runnable-track{
+                                        background: linear-gradient(to right, #000000, #00ff00);
+                                        }
+#greenInput::-moz-range-track {
+                              background: linear-gradient(to right, #000000, #00ff00);
+                             }
+#greenInput::-ms-track {
+                        background: linear-gradient(to right, #000000, #00ff00);
+                        }
+#cyanInput::-webkit-slider-runnable-track, #cyanInputCMYK::-webkit-slider-runnable-track{
+                                        background: linear-gradient(to right, #ffffff, #00ffff);
+                                        }
+#cyanInput::-moz-range-track, #cyanInputCMYK::-webkit-slider-runnable-track {
+                              background: linear-gradient(to right, #ffffff, #00ffff);
+                             }
+#cyanInput::-ms-track, #cyanInputCMYK::-webkit-slider-runnable-track {
+                        background: linear-gradient(to right, #ffffff, #00ffff);
                         }
 
