@@ -1,3 +1,178 @@
+@media (orientation: landscape){
+
+                
+        #rgbColorVisualizer{
+                width: 70%;
+                height: 150px;
+                margin: auto;
+                border-radius: 20px ;
+                border: solid black 2px;
+                background-color: rgb(0,0,0);
+                }
+
+        .rgbInput, .cmyInput, .cmkyInput  {
+                width: 70%;
+                text-align: center;
+                margin: auto;
+                }
+        
+        
+        #cmyColorVisualizer, #cmykColorVisualizer{
+                width: 70%;
+                height: 150px;
+                margin: auto;
+                border-radius: 20px ;
+                border: solid black 2px;
+                background-color: rgb(255, 255, 255);
+                }
+
+        
+        #hslColorVisualizer, #hsvColorVisualizer{
+                width: 70%;
+                height: 150px;
+                margin: auto;
+                border-radius: 20px ;
+                border: solid black 2px;
+                background-color: hsl(0, 100%, 50%);
+                }
+
+        .hslInput, .hsvInput{
+                width: 60%;
+                text-align: center;
+                margin: auto;
+                }
+
+        #wall{
+                width: 50%;
+                height: 90px;
+                border: solid black 3px;
+                margin: auto;
+                background-color: hsl(81, 95%, 26%);
+                }
+
+
+        #ballShadow{
+                position: relative;
+                width: 50px;
+                height: 50px;
+                background-color: hsl(81, 95%, 15%);
+                border-radius: 25px;
+                top: 30%;
+                left: 20%;
+                }
+
+        /* Venn Diagrams */
+
+        #blackScreen{
+                background-color: black;
+                width: 55%;
+                height: 200px;
+                margin: auto;
+                border-radius: 10px;
+                }
+
+        .rgbCircles {
+                position: relative;
+                margin: auto;
+                height: 120px;
+                width: 120px;
+                border-radius: 60px;
+                mix-blend-mode: screen;
+                }
+
+#circleRed{
+  background-color: red;
+  top: 10px;
+  }
+
+  #circleBlue{
+  background-color: rgb(0, 0, 255);
+  bottom: 180px;
+  left: 30px;
+  }
+
+ #circleGreen{
+  background-color: rgb(0, 255, 0);
+  bottom: 60px;
+  right: 30px;
+  }
+
+  #whiteCanvas{
+background-color: white;
+width: 55%;
+height: 200px;
+margin: auto;
+border-radius: 10px;
+border: solid 3px black;
+z-index: 0;
+}
+
+.cmyCircles {
+  position: relative;
+  margin: auto;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  mix-blend-mode: multiply;
+}
+
+#circleCyan{
+  background-color: cyan;
+  top: 10px;
+  z-index: 1
+  }
+
+  #circleYellow{
+  background-color: rgb(255, 255, 0);
+  bottom: 180px;
+  left: 30px;
+  }
+
+ #circleMagenta{
+  background-color: magenta;
+  bottom: 60px;
+  right: 30px;
+  }
+
+#secondWhiteCanvas{
+width: 55%;
+height: 200px;
+margin: auto;
+border-radius: 10px;
+border: solid 3px black;
+z-index: 0;
+}
+
+.rybCircles {
+  position: relative;
+  margin: auto;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  mix-blend-mode: luminosity;
+}
+
+#circleBlue2{
+  background-color: rgba(0, 0, 200, 70%);
+  top: 10px;
+  z-index: 1
+  }
+
+  #circleYellow2{
+  background-color: rgba(190, 190, 0, 90%);
+  bottom: 180px;
+  left: 30px;
+  }
+
+ #circleRed2{
+  background-color: rgba(200, 0, 0, 80%);
+  bottom: 60px;
+  right: 30px;
+  }
+                                
+                                }
+
+
 .text{
         text-align: justify;
     }
