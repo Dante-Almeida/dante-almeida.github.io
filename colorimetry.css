@@ -439,3 +439,12 @@ input[type=range]:focus::-ms-fill-upper {
 #hueInput::-ms-track, #hsvHueInput::-ms-track {
             background: linear-gradient(to right, hsl(0, 100%, 50%), hsl(60, 100%, 50%), hsl(120, 100%, 50%), hsl(180, 100%, 50%), hsl(240, 100%, 50%), hsl(300, 100%, 50%), hsl(360, 100%, 50%));
             }
+#saturationInput::-webkit-slider-runnable-track{
+                                        background: linear-gradient(to right, hsl(0, 0%, 50%), hsl(0, 100%, 50%));
+                                        }
+#saturationInput::-moz-range-track {
+                              background: linear-gradient(to right, hsl(0, 0%, 50%), hsl(0, 100%, 50%));
+                             }
+#saturationInput::-ms-track {
+                        background: linear-gradient(to right, hsl(0, 0%, 50%), hsl(0, 100%, 50%));
+                        }
