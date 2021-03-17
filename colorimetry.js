@@ -97,32 +97,37 @@ function setYellow() {
 var hue = 0;
 var saturation = 100;
 var lightness = 50;
+var outputHueValue = document.getElementById("outputHueValue");
+var outputSaturationValue = document.getElementById("outputSaturationValue");
+var outputLightnessValue = document.getElementById("outputLightnessValue");
+var saturationInput = document.getElementById("saturationInput");
 
 function setHSL() {
-        document.getElementById("hslColorVisualizer").style.backgroundColor = "hsl(" + hue +  ", " + saturation + "%, " +  lightness + "%)";
-        document.getElementById("hslOutputCode").innerHTML =  "hsl(" + hue + ", " + saturation +  "%, " + lightness + "%)";
-}
+                document.getElementById("hslColorVisualizer").style.backgroundColor = "hsl(" + hue +  ", " + saturation + "%, " +  lightness + "%)";
+                document.getElementById("hslOutputCode").innerHTML =  "hsl(" + hue + ", " + saturation +  "%, " + lightness + "%)";
+                }
 
 function setHue() {
-        hue = document.getElementById("hueInput").value;
-        document.getElementById("outputHueValue").innerHTML = hue +  "deg";
-        document.getElementById("outputHueValue").style.color =  "hsl(" + hue + ", 100%, 50%)";
-        setHSL();
-}
+                hue = document.getElementById("hueInput").value;
+                outputHueValue.innerHTML = hue +  "deg";
+                outputHueValue.style.color =  "hsl(" + hue + ", 100%, 50%)";
+                saturationInput.style.background = "linear-gradient(to right, hsl("+ hue + ", 0%, 50%), hsl(" + hue + ", 100%, 50%));";
+                setHSL();
+                }
 
 function setSaturation() {
-        saturation = document.getElementById("saturationInput").value;
-        document.getElementById("outputSaturationValue").innerHTML =  saturation + "%";
-        document.getElementById("outputSaturationValue").style.color = "hsl(" + hue + "," + saturation + "%, 50%)";
-        setHSL();
-}
+                saturation = document.getElementById("saturationInput").value;
+                outputSaturationValue.innerHTML =  saturation + "%";
+                outputSaturationValue.style.color = "hsl(" + hue + "," + saturation + "%, 50%)";
+                setHSL();
+                }
 
 function setLightness() {
-        lightness = document.getElementById("lightnessInput").value;
-        document.getElementById("outputLightnessValue").innerHTML =  lightness + "%";
-        document.getElementById("outputLightnessValue").style.color = "hsl(" + hue + ", 100%," +  lightness + "%)";
-        setHSL();
-}
+                lightness = document.getElementById("lightnessInput").value;
+                outputLightnessValue.innerHTML =  lightness + "%";
+                outputLightnessValue.style.color = "hsl(" + hue + ", 100%," +  lightness + "%)";
+                setHSL();
+                }
 
 
 //CMKY-related code
