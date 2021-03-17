@@ -111,7 +111,7 @@ function setHue() {
                 hue = document.getElementById("hueInput").value;
                 outputHueValue.innerHTML = hue +  "deg";
                 outputHueValue.style.color =  "hsl(" + hue + ", 100%, 50%)";
-                saturationInput.style.background = "linear-gradient(to right, hsl("+ hue + ", 0%, 50%), hsl(" + hue + ", 100%, 50%));";
+                saturationInput.style.background = "linear-gradient(to right, hsl("+ hue + ", 0%, 50%), hsl(" + hue + ", 100%, 50%))";
                 setHSL();
                 }
 
