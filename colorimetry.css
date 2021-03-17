@@ -80,98 +80,101 @@
                 mix-blend-mode: screen;
                 }
 
-#circleRed{
-  background-color: red;
-  top: 10px;
-  }
+          #circleRed{
+                background-color: red;
+                top: 10px;
+                }
 
-  #circleBlue{
-  background-color: rgb(0, 0, 255);
-  bottom: 180px;
-  left: 30px;
-  }
+          #circleBlue{
+                background-color: rgb(0, 0, 255);
+                bottom: 180px;
+                left: 30px;
+                }
 
- #circleGreen{
-  background-color: rgb(0, 255, 0);
-  bottom: 60px;
-  right: 30px;
-  }
+          #circleGreen{
+                background-color: rgb(0, 255, 0);
+                bottom: 60px;
+                right: 30px;
+                }
 
-  #whiteCanvas{
-background-color: white;
-width: 55%;
-height: 200px;
-margin: auto;
-border-radius: 10px;
-border: solid 3px black;
-z-index: 0;
+          #whiteCanvas{
+                background-color: white;
+                width: 55%;
+                height: 200px;
+                margin: auto;
+                border-radius: 10px;
+                border: solid 3px black;
+                z-index: 0;
+                }
+
+          .cmyCircles {
+              position: relative;
+              margin: auto;
+              height: 120px;
+              width: 120px;
+              border-radius: 60px;
+              mix-blend-mode: multiply;
+              }
+
+          #circleCyan{
+              background-color: cyan;
+              top: 10px;
+              z-index: 1
+            }
+
+        #circleYellow{
+            background-color: rgb(255, 255, 0);
+            bottom: 180px;
+            left: 30px;
+          }
+
+        #circleMagenta{
+            background-color: magenta;
+            bottom: 60px;
+            right: 30px;
+            }
+
+        #secondWhiteCanvas{
+          width: 55%;
+          height: 200px;
+          margin: auto;
+          border-radius: 10px;
+          border: solid 3px black;
+          z-index: 0;
+          }
+
+      .rybCircles {
+          position: relative;
+          margin: auto;
+          height: 120px;
+          width: 120px;
+          border-radius: 60px;
+          mix-blend-mode: luminosity;
+          }
+
+      #circleBlue2{
+          background-color: rgba(0, 0, 200, 70%);
+          top: 10px;
+          z-index: 1
+          }
+
+      #circleYellow2{
+          background-color: rgba(190, 190, 0, 90%);
+          bottom: 180px;
+          left: 30px;
+          }
+
+      #circleRed2{
+          background-color: rgba(200, 0, 0, 80%);
+          bottom: 60px;
+          right: 30px;
+          }
+                            
 }
 
-.cmyCircles {
-  position: relative;
-  margin: auto;
-  height: 120px;
-  width: 120px;
-  border-radius: 60px;
-  mix-blend-mode: multiply;
-}
 
-#circleCyan{
-  background-color: cyan;
-  top: 10px;
-  z-index: 1
-  }
 
-  #circleYellow{
-  background-color: rgb(255, 255, 0);
-  bottom: 180px;
-  left: 30px;
-  }
-
- #circleMagenta{
-  background-color: magenta;
-  bottom: 60px;
-  right: 30px;
-  }
-
-#secondWhiteCanvas{
-width: 55%;
-height: 200px;
-margin: auto;
-border-radius: 10px;
-border: solid 3px black;
-z-index: 0;
-}
-
-.rybCircles {
-  position: relative;
-  margin: auto;
-  height: 120px;
-  width: 120px;
-  border-radius: 60px;
-  mix-blend-mode: luminosity;
-}
-
-#circleBlue2{
-  background-color: rgba(0, 0, 200, 70%);
-  top: 10px;
-  z-index: 1
-  }
-
-  #circleYellow2{
-  background-color: rgba(190, 190, 0, 90%);
-  bottom: 180px;
-  left: 30px;
-  }
-
- #circleRed2{
-  background-color: rgba(200, 0, 0, 80%);
-  bottom: 60px;
-  right: 30px;
-  }
-                                
-                                }
-
+/* General code */
 
 .text{
         text-align: justify;
