@@ -169,6 +169,18 @@
           bottom: 60px;
           right: 30px;
           }
+  
+  
+      #rgbCode, #hexCode{
+                      width: 90%;
+                      font-family: monospace;
+                      font-weight: 600;
+                      margin: auto;
+                      border: black solid 1px;
+                      border-radius: 10px;
+                      background-color: #2f3152;
+                      color: #86badc;
+                    }
                             
 }
 
