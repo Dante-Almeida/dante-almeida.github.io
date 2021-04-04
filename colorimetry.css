@@ -173,6 +173,7 @@
   
       #rgbCode, #hexCode{
                       width: 90%;
+                      font-size: 150%;
                       font-family: monospace;
                       font-weight: 600;
                       margin: auto;
