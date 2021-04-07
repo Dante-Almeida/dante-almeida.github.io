@@ -219,8 +219,8 @@
 
 
 #rgbColorVisualizer{
-                    width: 70%;
-                    height: 350px;
+                    width: 60%;
+                    height: 250px;
                     margin: auto;
                     border-radius: 20px;
                     border: solid black 2px;
@@ -228,16 +228,16 @@
                     }
 
 .rgbInput, .cmyInput, .cmkyInput {
-                                    width: 70%;
+                                    width: 65%;
                                     text-align: center;
                                     margin: auto;
                                 }
 
 .outputValue{
-            font-weight: 900;
+            font-weight: 800;
             position: absolute;
             text-align: left;
-            font-size: 30px;
+            font-size: 25px;
             }
 
 #title{
@@ -253,8 +253,8 @@ h2{
 }
 
 #cmyColorVisualizer, #cmykColorVisualizer{
-                                            width: 70%;
-                                            height: 350px;
+                                            width: 60%;
+                                            height: 250px;
                                             margin: auto;
                                             border-radius: 20px ;
                                             border: solid black 2px;
@@ -270,8 +270,8 @@ h2{
 /* hsl stuff*/
 
 #hslColorVisualizer, #hsvColorVisualizer{
-                                        width: 70%;
-                                        height: 350px;
+                                        width: 60%;
+                                        height: 250px;
                                         margin: auto;
                                         border-radius: 20px;
                                         border: solid black 2px;
