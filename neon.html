@@ -1,25 +1,32 @@
-
 <!doctype html>
 <html>
-<head>
- <title></title>
- <link rel="stylesheet" href="neon.css">
-</head>
-<body>
+ <head>
+  <title>Neon Lights</title>
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
 
-<div id="placard">
-<br>
- <p class="words"><span id="redOff">Red</span></p>
-<p id="purpleOff" class="words"> &amp</p>
- <p id="blueOff" class="words">Blue</p>
-</div>
+  <div id="placard">
+   <br>
+   <p class="words"><span id="redOff">Red</span></p>
+   <p id="purpleOff" class="words"> &amp</p>
+   <p id="blueOff" class="words">Blue</p>
+  </div>
 
-<button onClick="simpleGlow()">Simple Glow</button>
-<button onClick="patternOne = setInterval(pattern1, 1000);">Pattern 1</button>
-<button onClick="patternTwo = setInterval(pattern2, 1000);">Pattern 2</button>
+  <button id="turnOff"  onClick="turnOff()">Turn Off</button>
+  <button id="continuous"  onClick="simpleGlow()">Continuous</button>
+  <button id="patternI"  onClick="clearInterval(patternTwo); clearInterval(patternThree); clearInterval(rAnDoM); patternOne = setInterval(pattern1, 100 * hertz);">Pattern 1</button>
+  <button id="patternII"  onClick="clearInterval(patternOne); clearInterval(patternThree); clearInterval(rAnDoM); patternTwo = setInterval(pattern2, 100 * hertz);">Pattern 2</button>
+  <button id="patternIII"  onClick="clearInterval(patternOne); clearInterval(patternTwo); clearInterval(rAnDoM); patternThree = setInterval(pattern3, 100 * hertz);">Pattern 3</button>
+  <button id="random"  onClick="clearInterval(patternOne); clearInterval(patternTwo); clearInterval(patternThree); rAnDoM = setInterval(randomizer, 100 * hertz);">Random</button>
+  <br><br>
 
-<p id="debugger"></p>
+  <p><strong>Frequency:</strong></p>
+  <input id="speeder" type="range" min="0.1" max="15" oninput="frequency()">
+  <p id="frequencyOutput">1.5Hz</p>
 
- <script src="neon.js"></script>
-</body>
+  <p><strong>Cycle's state: </strong><span id="freq"></span></p>
+
+  <script src="script.js"></script>
+ </body>
 </html>
