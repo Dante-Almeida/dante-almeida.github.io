@@ -1,57 +1,58 @@
-
-
-*{
-  margin: auto;
-  }
+@media (orientation: portrait){
   
-#question{
+  *{
+    margin: auto;
+    }
+  
+  #question{
     font-family: monospace;
     margin: auto;
     text-align:  center;
     }
 
-#feedback{
+  #feedback{
     font-family: monospace;
     }
 
-div{
+  div{
     text-align: center;
     }
 
-h1{
-  margin-right: auto;
-  margin-left: auto;
-  text-align:  center;
-  font-family: cursive;
-}
+  h1{
+    margin-right: auto;
+    margin-left: auto;
+    text-align:  center;
+    font-family: cursive;
+  }
 
 
-button{
+  button{
     font-size: 20px;
     }
 
-input{
+  input{
     font-size: 20px;
     width: 100px ;
     text-align: center;
     }
 
-.number{
+  .number{
     font-size: 30px;
     width: 50px;
     font-family: monospace;
     }
 
-#problem {
+  #problem {
     text-align: center ;
     font-family: monospace;
     }
 
-.keys {
+  .keys {
     font-size: 0;
     }
 
-#signature{
+  #signature{
         font-size: 10px;
         text-align: center;
         }
+}
