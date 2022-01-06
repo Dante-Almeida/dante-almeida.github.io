@@ -90,6 +90,7 @@ function makeProblem(){
     } else if(picker<0.85){
         answer*=11;
         total = answer/1.1;
+        total = Math.round(total);
         feedback = "Remember that 10% = 10/100 = 1/10. Thus, in order to get a 10% increase of a value, calculate value+(value÷10).";
         question.innerHTML =  "An increase of 10% over "+ total + " results ";
     }else{
