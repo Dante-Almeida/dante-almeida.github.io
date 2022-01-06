@@ -47,7 +47,8 @@
             }
 
     #feedback{
-            font-size: 200%;
+            font-size: 160%;
+            font-family: monospace;
             }
 
 
@@ -110,6 +111,7 @@
 
     #feedback,#livesleft,#correctanswers{
         font-size: 175%;
+        font-family: monospace;
     }
     
     p{ 
