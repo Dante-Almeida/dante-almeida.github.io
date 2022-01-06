@@ -20,34 +20,34 @@ function makeProblem(){
     if(picker<0.05){
         total = answer*10;
         feedback = "Remember that 10% = 10/100 = 1/10. Thus, in order to get 10% of a value, calculate value÷10.";
-        question.innerHTML = "10% of "+ total + " is ";
+        question.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10% of "+ total + " is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     } else if(picker<0.1){
         total = answer*5;
         feedback = "Remember that 20% = 20/100 = 1/5. Thus, in order to get 20% of a value, calculate value÷5.";
-        question.innerHTML = "20% of "+ total + " is ";
+        question.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20% of "+ total + " is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     } else if(picker<0.15){
         total = answer*4;
         feedback = "Remember that 25% = 25/100 = 1/4. Thus, in order to get 25% of a value, calculate value÷4.";
-        question.innerHTML = "25% of "+ total + " is ";
+        question.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25% of "+ total + " is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     }else if(picker<0.2){
         answer*=10;
         total = answer*2.5;
         feedback = "Remember that 40% = 40/100 = 2/5. Thus, in order to get 40% of a value, calculate (value÷5)x2.";
-        question.innerHTML =  "40% of "+ total + " is ";
+        question.innerHTML =  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40% of "+ total + " is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     } else if(picker<0.25){
         total = answer*2;
         feedback = "Remember that 50% = 50/100 = 1/2. Thus, in order to get 50% of a value, calculate value÷2.";
-        question.innerHTML =  "50% of "+ total + " is ";
+        question.innerHTML =  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50% of "+ total + " is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     } else if(picker<0.3){
         answer*=3;
         total = (4*answer)/3;
         feedback = "Remember that 75% = 75/100 = 3/4. Thus, in order to get 75% of a value, calculate value - (value÷4).";
-        question.innerHTML =  "75% of "+ total + " is ";
+        question.innerHTML =  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75% of "+ total + " is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     }else if(picker<0.35){
         answer*=20;
         total = answer*1.25;
         feedback = "Remember that 80% = 80/100 = 4/5. Thus, in order to get 80% of a value, calculate value-(value÷5).";
-        question.innerHTML =  "80% of "+ total + " is ";
+        question.innerHTML =  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80% of "+ total + " is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     }else if(picker<0.4){
         answer*=9;
         total = answer/0.9;
