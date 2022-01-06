@@ -43,7 +43,7 @@
             font-size: 0;
             }
 
-    #livesleft,#correctanswers{
+    #livesleft,#correctanswers, #sectionLength{
             font-size: 350%;
             }
 
