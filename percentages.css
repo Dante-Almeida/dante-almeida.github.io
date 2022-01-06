@@ -2,7 +2,7 @@
 @media (orientation: portrait){
 
     h1{
-        font-size: 600%;
+        font-size: 550%;
         font-family: cursive;
         margin-left: auto;
         margin-right: auto;
@@ -37,7 +37,7 @@
     #problem {
             text-align: center ;
             font-family: monospace;
-            font-size: x-large;
+            font-size: 63px;
             }
 
     .keys {
