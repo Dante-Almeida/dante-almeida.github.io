@@ -9,6 +9,11 @@
     text-align:  center;
     }
 
+  #score{
+     margin: auto;
+     text-align:  center;
+    }
+
   #feedback{
     font-family: monospace;
     }
