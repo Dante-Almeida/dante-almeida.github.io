@@ -44,9 +44,14 @@
             font-size: 0;
             }
 
-    #livesleft,#correctanswers, #sectionLength{
+    #livesleft,#correctanswers {
             font-size: 350%;
             }
+ 
+ 
+ #sectionLength{
+   font-size: 200%;
+   }
 
     #feedback{
             font-size: 160%;
