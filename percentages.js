@@ -56,7 +56,7 @@ function makeProblem(){
     }else if(picker<0.45){
         answer*=4;
         total = answer/0.8;
-        feedback = "Remember that 20% = 20/100 = 2/5. Thus, in order to get a 20% decrease of a value, calculate value-((value÷5)x2).";
+        feedback = "Remember that 20% = 20/100 = 1/5. Thus, in order to get a 20% decrease of a value, calculate value-(value÷5).";
         question.innerHTML =  "A decrease of 20% over "+ total + " results ";
     }else if(picker<0.5){
         answer*=3;
@@ -75,7 +75,7 @@ function makeProblem(){
     }else if(picker<0.65){
         answer*=24;
         total = answer/1.2;
-        feedback = "Remember that 20% = 20/100 = 2/5. Thus, in order to get a 20% increase of a value, calculate value+((value÷5)x2).";
+        feedback = "Remember that 20% = 20/100 = 1/5. Thus, in order to get a 20% increase of a value, calculate value+(value÷5).";
         question.innerHTML =  "An increase of 20% over "+ total + " results ";
     }else if(picker<0.75){
         answer*=20;
